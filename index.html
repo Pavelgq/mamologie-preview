@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Клиника</title>
+    <meta
+      name="description"
+      content="Simple starter webpack 5 project template boilerplate supporting SASS/PostCSS, Babel ES7, browser syncing, code linting. Easy project setup having multiple features and developer friendly tools."
+    />
+    <meta
+      name="keywords"
+      content="webpack, webpack-configuration, template, boilerplate, setup, html, css, sass, javascript"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="author" content="Gordeev Pavel"> -->
+  <link rel="icon" href="favicon.ico"><script defer src="js/app.js"></script><link href="css/app.css" rel="stylesheet"></head>
+  <body data-id-page="home" id="home">
+    <header class="header header--fixed is-show">
+  <div class="header__row header__row--light">
+      <div class="row__container header__container">
+        <div class="header__logo logo">
+          <span class="logo__image image">
+            <img src="data:image/png;base64,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" alt="Logo" />
+          </span>
+          <span class="logo__text">
+            Отделение хирургических методов лечения опухолей молочной железы
+            клиники ВМТ им. Н. И. Пирогова СПбГУ
+          </span>
+        </div>
+        <a href="../request.html" data-action="requestForm" class="header__request_button button button--contained">
+          Оставить заявку на лечение
+        </a>
+      </div>
+  </div>
+
+  <div class="header__row">
+      <nav data-section="header" class="row__container header__nav nav"></nav>
+  </div>
+
+  
+</header>
+    <div class="home__break"></div>
+    <main class="main">
+      <div class="main__container">
+        <div class="main__features features">
+  <div class="features__card card card__general">
+    <h2 class="card__title">Онкопациенты первые в хирургической очереди</h2>
+    <span class="card__description">
+      Мы понимаем важность времени в хирургическом лечении рака молочной железы.
+      Наша очередь на операции для онкопациентов составляет не более 2 недель, в
+      связи с приоритетом диагноза.
+    </span>
+    <div class="card__buttonWrapper">
+      <a href="./request.html" class="card__button button button--contained">
+        Оставить заявку на лечение
+      </a>
+      <a href="#" class="card__button button button--outlined"> Подробней </a>
+    </div>
+  </div>
+  <div class="features__wrapper">
+    <div class="features__card card card__mini card__mini--first">
+      <h2 class="card__title">
+        Одномоментная реконструкция молочной железы по ОМС
+      </h2>
+      <a href="#" class="card__button button button--outlined"> Подробней </a>
+    </div>
+    <div class="features__card card card__mini card__mini--second">
+      <h2 class="card__title">
+        Отсроченная реконструкция молочной железы по ОМС
+      </h2>
+      <a href="#" class="card__button button button--outlined"> Подробней </a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div id="about" class="main__container about">
+        <h2 class="title--m about__title">О нас</h2>
+        <div class="about__wrapper">
+          <div class="text--l about__description">
+            <p class="about__paragraph">
+              Отделение хирургических методов лечения опухолей молочной
+              железы(онкологическое отделение № 1) является частью клиники
+              высоких медицинских технологий им. Н.И. Пирогова
+              Санкт-Петербургского государственного университета — одного
+              из старейших медицинских учреждений Санкт-Петербурга
+              и Северо-Западного региона.
+            </p>
+            <p>
+              На базе онкологического отделения № 1 проводится консультативный
+              приём, диагностика и лечение пациентов с заболеваниями молочных
+              желез. Основным направлением работы онкологов — маммологов
+              является лечение рака молочной железы. В год в отделении
+              производится более 350 операций на молочных железах.
+            </p>
+          </div>
+          <img class="about__image" src="./images/content/team.jpg" />
+        </div>
+      </div>
+      <div id="directions" class="main__container">
+        <div class="main__directions directions">
+  <h2 class="title--m directions__title">Направления</h2>
+  <ul class="directions__cards">
+    <li class="directions__card directions__card--first">
+      <div class="directions__cardWrapper">
+        <h3 class="title--s directions__subtitle">
+          Хирургическое лечение заболеваний молочной железы
+        </h3>
+        <button
+          data-direction-article="1"
+          class="button button--contained directions__collapse directions__collapse--hide"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="9"
+            viewBox="0 0 14 9"
+            fill="none"
+          >
+            <path
+              d="M1 1.5L7 7.5L13 1.5"
+              stroke="#FB9EB7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="directions__bridge"></div>
+    </li>
+    <li class="directions__card directions__card--middle">
+      <div class="directions__cardWrapper directions__cardWrapper">
+        <h3 class="title--xs directions__subtitle">
+          Хирургическое лечение и диагностика опухолей кожи с
+          реконструктивно-пластическим этапом при необходимости
+        </h3>
+        <button
+          data-direction-article="2"
+          class="button button--contained directions__collapse directions__collapse--hide"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="9"
+            viewBox="0 0 14 9"
+            fill="none"
+          >
+            <path
+              d="M1 1.5L7 7.5L13 1.5"
+              stroke="#FB9EB7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="directions__bridge directions__bridge--show"></div>
+    </li>
+    <li class="directions__card directions__card--last">
+      <div class="directions__cardWrapper">
+        <h3 class="title--s directions__subtitle">Эстетическая хирургия</h3>
+        <button
+          data-direction-article="3"
+          class="button button--contained directions__collapse directions__collapse--hide"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="9"
+            viewBox="0 0 14 9"
+            fill="none"
+          >
+            <path
+              d="M1 1.5L7 7.5L13 1.5"
+              stroke="#FB9EB7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="directions__bridge"></div>
+    </li>
+  </ul>
+
+  <div
+    data-direction-content="1"
+    class="directions__content directions__content--first visually-hidden"
+  >
+    <div class="directions__description">
+      <p>
+        В нашей клинике врач имеет в своем распоряжении самые передовые методы
+        исследования патологии молочной железы и ставит диагноз на основании
+        данных полученных при следующих лабораторно-инструментальных
+        исследованиях:
+      </p>
+      <ul>
+        <li>Маммография</li>
+        <li>УЗИ молочных желез</li>
+        <li>МРТ молочных желез</li>
+        <li>Морфологическая диагностика</li>
+        <li>Генетическая диагностика</li>
+      </ul>
+      <p>
+        На приеме врач-маммолог на основании полученных данных анамнеза и
+        обследования проводит дифференцированный диагноз рака молочной железы с
+        такими заболеваниями как:
+      </p>
+      <ul>
+        <li>
+          Фиброз молочной железы, аденоз склерозирующий или несклерозирующий
+          папилломатоз, папилломы без атипии внутрипротоковые
+        </li>
+        <li>
+          Гиперплазия обычного типа или умеренная без атипии, кисты молочной
+          железы
+        </li>
+        <li>
+          Гранулемы, мастит, жировой некроз (посттравматический), дуктоэктазия
+        </li>
+        <li>
+          Липома, гемартома, гемангиома, гематома, нейрофиброма, фиброаденома
+        </li>
+      </ul>
+      <p>
+        Особенностью нашей клиники является
+        <b>комплексный и индивидуальный подход к лечению каждого пациента</b>.
+        После постановки диагноза, но до начала лечения каждый клинический
+        случай попадает на обсуждение комиссии онкологов клиники. На данном
+        этапе обсуждаются все особенности течения заболевания, показания и
+        противопоказания к каждому из методов терапии и подбирается оптимальный
+        план лечения.
+      </p>
+      <h4 class="title--s">Оперативное лечение</h4>
+      <ol>
+        <li>
+          органосохраняющие операции при доброкачественных образованиях:
+          секторальные резекции любой локализации
+        </li>
+        <li>мастэктомии и онкопластические резекции</li>
+        <li>
+          реконструктивные операции на молочной железе при/после мастэктомии:
+          <ul>
+            <li>
+              одномоментная реконструкция имплантатами (протез устанавливается
+              сразу после удаления молочной железы);
+            </li>
+            <li>
+              отсроченная реконструкция имплантатами (спустя время
+              после удаления молочной железы устанавливается тканевой экспандер,
+              а после эндопротез);
+            </li>
+            <li>
+              реконструкция кожными лоскутами (реконструкция молочной железы
+              с использованием собственных тканей и имплантатов).
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        Все оперативные вмешательства при злокачественных опухолях выполняются
+        с определением «сторожевых» (сигнальных) лимфоузлов, в том числе
+        <b>с использованием методики ICG</b>. Во время оперативного
+        вмешательства пациенту вводят в ткани, расположенные рядом с опухолью,
+        специальный флуоресцентный контрастный раствор. Вещество попадая
+        в сосудистое русло становится видимым под прицелом специальной оптики
+        в инфракрасном спектре. Благодаря этой перспективной технологии
+        у хирурга появляется возможность выполнить максимально органосохраняющую
+        операцию и определить невидимые при традиционном вмешательстве
+        лимфоузлы, поражённые метастазами. На сегодняшний день ICG-методика
+        является золотым стандартом не только в онкологии, но и в хирургии
+        в целом. Она проста в использовании и безопасна для пациента.
+      </p>
+    </div>
+  </div>
+  <div
+    data-direction-content="2"
+    class="directions__content directions__content--first visually-hidden"
+  >
+    <div class="directions__description">
+      <h4 class="title--s">
+        Онкодерматологи нашей клиники занимаются диагностикой и лечением
+        онкологических заболеваний, в частности:
+      </h4>
+
+      <ul>
+        <li>
+          злокачественные новообразования кожи меланоцитарного происхождения,
+          такие как: меланома кожи,
+        </li>
+        <li>
+          злокачественные немеланомные опухоли кожи, к которым относятся
+          базальноклеточная карцинома (базалиома) и плоскоклеточный рак кожи,
+        </li>
+        <li>злокачественные опухоли мягких тканей, такие как саркома,</li>
+        <li>
+          доброкачественные опухоли мягких тканей, например: липома, фиброма,
+        </li>
+        <li>
+          доброкачественные образования кожи: невусы, папилломы, кожный рог,
+          кератома и т.д.
+        </li>
+      </ul>
+      <p>
+        Онкодерматологи нашей клиники имеют богатый опыт не только
+        в диагностике, консервативном и хирургическом лечении пациентов,
+        но и в динамическом наблюдении за пациентами, которое так необходимо
+        им после лечения. Лечение новообразований кожи у пациентов всегда сугубо
+        индивидуально и зависит от многих факторов: возраста человека,
+        особенностей организма, состояния его здоровья.
+      </p>
+      <h4 class="title--s">
+        В нашем отделении вы можете получить следующие виды лечения:
+      </h4>
+      <ul>
+        <li>
+          Хирургическое лечение. Обычно применяется при обнаружении у пациента
+          меланомы, плоскоклеточного или базальноклеточного рака кожи. Решение
+          о проведение оперативного вмешательства очень часто зависит от стадии
+          заболевания и его агрессивности, принимается врачом по согласованию
+          с пациентом.
+        </li>
+        <li>
+          Лазерная хирургия доброкачественных образований кожи — простых
+          невусов, папиллом, кератом.
+        </li>
+        <li>
+          Фотодинамическая терапия как опухолей кожи, так и мягких тканей.
+          Обычно используется при базальноклеточном раке кожи.
+        </li>
+        <li>
+          Иммунотерапия немеланоцитарных опухолей. Обычно используется
+          при базальноклеточном раке кожи и его предшественнике — актиническом
+          кератозе.
+        </li>
+      </ul>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  </div>
+  <div
+    data-direction-content="3"
+    class="directions__content directions__content--first visually-hidden"
+  >
+    <div class="directions__description">
+      <ol>
+        <li>
+          Эстетическая коррекция возрастных изменений
+          <b>лица и шеи</b> (омолаживающие операции в области лица и шеи -
+          фейслифт, включая эндоскопические методики, хирургическая бьютификация
+          лица у пациентов относительно молодого возраста).
+        </li>
+        <li>
+          Эстетическая коррекция <b>периорбитальной области</b> (омолаживающие
+          операции в области век, коррекция азиатского века, коррекция птоза
+          верхнего века).
+        </li>
+        <li>
+          Эстетическая коррекция наружного носа с восстановлением функции
+          носового дыхания (ринопластика).
+        </li>
+        <li>
+          Эстетическая коррекция <b>периоральной области</b>:
+          <ul>
+            <li>подтяжка верхней губы - хейлопластика Bullhorn,</li>
+            <li>увеличение верхней и нижней губы - V-Y-хейлопластика,</li>
+            <li>резекция мышцы, опускающей угол рта (DAO),</li>
+            <li>резекция комков Биша.</li>
+          </ul>
+        </li>
+        <li>Эстетическая коррекция <b>ушных раковин</b> (отопластика).</li>
+        <li>
+          Эстетическая коррекция <b>молочных желез</b>:
+          <ul>
+            <li>
+              увеличение с использованием имплантатов и с помощью собственной
+              жировой ткани,
+            </li>
+            <li>уменьшение молочных желез при гипертрофии,</li>
+            <li>подтяжка молочных желез.</li>
+          </ul>
+        </li>
+        <li>
+          Эстетическая коррекция <b>туловища, конечностей</b>:
+          <ul>
+            <li>
+              абдоминопластика (классическая, мини-абдоминопластика,
+              напряжённо-боковая) с одномоментной коррекцией грыж передней
+              брюшной стенки (если таковые имеют место),
+            </li>
+            <li>
+              корригирующие эстетические операции в области туловища
+              и конечностей после массивной потери массы тела (боди-лифт,
+              брахиопластика, феморопластика),
+            </li>
+            <li>
+              эстетическая коррекция ягодиц (глютеопластика) с использованием
+              ягодичных имплантатов и собственной жировой ткани,
+            </li>
+            <li>
+              эстетическая коррекция формы голеней (круропластика)
+              с использованием имплантатов или собственной жировой ткани,
+            </li>
+            <li>липосакция, липоскульптура туловища, конечностей, лица,</li>
+            <li>липофиллинг кистей с целью омоложения</li>
+          </ul>
+        </li>
+        <li>
+          Эстетическая коррекция <b>наружных половых органов</b> (интимная
+          пластика) у мужчин и женщин.
+        </li>
+        <li>Эстетическая коррекция рубцов (шрамов).</li>
+        <li>
+          Реконструктивные операции
+          <b
+            >в области лица при патологии врождённого и приобретённого
+            характера</b
+          >.
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div id="team" class="main__container">
+        <div class="main__team team section">
+  <h2 class="title--m team__title section__title">Наши врачи</h2>
+  <div class="team__container">
+    <ul class="team__list">
+      <li class="team__item team__item--active" data-team-card="1">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_1.ce6a27.jpg"
+          alt="Заведующий онкологическим отделением Дашян Гарик Альбертович"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Дашян Гарик Альбертович</h3>
+          <span class="team__role"
+            >Заведующий онкологическим отделением № 1, врач-онколог,
+            д.м.н.</span
+          >
+        </div>
+      </li>
+      <li class="team__item" data-team-card="2">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_2.1645a6.jpg"
+          alt="Врач-онколог Ахмедов Руслан Мерзиалиевич"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Ахмедов Руслан Мерзиалиевич</h3>
+          <span class="team__role"
+            >Врач-онколог, пластический хирург онкологического отделения №
+            1</span
+          >
+        </div>
+      </li>
+      <li class="team__item" data-team-card="7">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_7.2aaf58.jpg"
+          alt="Врач-онколог Семилетова Юлия Вадимовна"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Семилетова Юлия Вадимовна</h3>
+          <span class="team__role"
+            >Врач-онколог онкологического отделения № 1, к.м.н.</span
+          >
+        </div>
+      </li>
+      <li class="team__item" data-team-card="3">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_3.2722d7.jpg"
+          alt="Врач-онколог Журов Александр Сергеевич"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Журов Александр Сергеевич</h3>
+          <span class="team__role"
+            >Врач-онколог онкологического отделения № 1</span
+          >
+        </div>
+      </li>
+      <li class="team__item" data-team-card="4">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_4.b93657.jpg"
+          alt="Врач-хирург Константинова Валерия Валерьевна"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Константинова Валерия Валерьевна</h3>
+          <span class="team__role"
+            >Врач-хирург, маммолог онкологического отделения № 1</span
+          >
+        </div>
+      </li>
+      <li class="team__item" data-team-card="5">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_5.367aa9.jpg"
+          alt="Врач-онколог Чебышёва Ольга Алексеевна"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Чебышёва Ольга Алексеевна</h3>
+          <span class="team__role"
+            >Врач-онколог 2-ой квалификационной категории онкологического
+            отделения № 1</span
+          >
+        </div>
+      </li>
+      <li class="team__item" data-team-card="6">
+        <img
+          class="team__photo"
+          src="images/design/team_photo_6.b338bc.jpg"
+          alt="Врач пластический хируг Тураханова Гульнора Тураевна"
+        />
+        <div class="team__info">
+          <h3 class="team__name">Тураханова Гульнора Тураевна</h3>
+          <span class="team__role"
+            >Врач пластический хируг онкологического отделения № 1</span
+          >
+        </div>
+      </li>
+    </ul>
+    <div class="team__details">
+      <div data-team-details="1" class="team__detail">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">Дашян Гарик Альбертович</h3>
+              <p class="text--s team__text">
+                Заведующий онкологическим отделением № 1, врач-онколог, д.м.н.
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс
+                на ул. Кораблестроителей, д. 20, к. 1
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_1.ce6a27.jpg"
+            alt="Заведующий онкологическим отделением Дашян Гарик Альбертович"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <span class="text--s team__text">
+            Злокачественные и доброкачественные новообразования молочных желез:
+          </span>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">рак молочной железы,</li>
+            <li class="text--s team__direction_item">
+              саркома молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              липома молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              фиброаденома молочной железы,
+            </li>
+            <li class="text--s team__direction_item">киста молочной железы,</li>
+            <li class="text--s team__direction_item">мастопатия,</li>
+            <li class="text--s team__direction_item">мастодиния</li>
+          </ul>
+        </div>
+        <div class="video">
+          <iframe
+            width="737"
+            height="413"
+            src="https://www.youtube.com/embed/oA_7dOhF-LQ?si=_vTdcmTi3TiK3zc0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div data-team-details="2" class="team__detail visually-hidden">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">Ахмедов Руслан Мерзиалиевич</h3>
+              <p class="text--s team__text">
+                Врач-онколог, пластический хирург онкологического отделения № 1
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс на
+                наб. р. Фонтанки, д. 154
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_2.1645a6.jpg"
+            alt="Врач-онколог Ахмедов Руслан Мерзиалиевич"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">
+              Хирургическое и лекарственное лечение рака молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Онкопластические и реконструктивно-пластические одномоментные /
+              отсроченные операции у больных раком. молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Наследственный рак молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Пластическая хирургия молочной железы,
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-team-details="7" class="team__detail visually-hidden">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">Семилетова Юлия Вадимовна</h3>
+              <p class="text--s team__text">
+                Врач-онколог онкологического отделения № 1, к.м.н.
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс
+                на ул. Кораблестроителей, д. 20, к. 1
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_7.2aaf58.jpg"
+            alt="Врач-онколог Семилетова Юлия Вадимовна"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">
+              Диагностика и лечение злокачественных новообразований кожи
+              (меланома кожи, базалиома, плоскоклеточный рак кожи, саркомы кожи,
+              за исключением саркомы Капоши),
+            </li>
+            <li class="text--s team__direction_item">
+              Диагностика и лечение злокачественных опухолей мягких тканей
+              (саркомы мягких тканей),
+            </li>
+            <li class="text--s team__direction_item">
+              Доброкачественные образования кожи (невусы «родинки», кератомы,
+              папилломы, кожный рог),
+            </li>
+            <li class="text--s team__direction_item">
+              Лазерная хирургия доброкачественных образований кожи,
+            </li>
+            <li class="text--s team__direction_item">
+              Фотодинамическая терапия опухолей кожи, мягких тканей.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-team-details="3" class="team__detail visually-hidden">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">Журов Александр Сергеевич</h3>
+              <p class="text--s team__text">
+                Врач-онколог онкологического отделения № 1
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс на
+                наб. р. Фонтанки, д. 154
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_3.2722d7.jpg"
+            alt="Врач-онколог Журов Александр Сергеевич"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">
+              Лечение злокачественных новообразований молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Лечение злокачественных новообразований кожи,
+            </li>
+            <li class="text--s team__direction_item">
+              Радикальные органосохраняющие операции при раке молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Пересадка свободного кожного лоскута (радикальные резекции), в том
+              числе различные онкопластические варианты,
+            </li>
+            <li class="text--s team__direction_item">
+              Вакуум-аспирационная биопсия доброкачественных образований в
+              молочной железе,
+            </li>
+            <li class="text--s team__direction_item">
+              Иссечение злокачественных новообразований кожи любых локализаций,
+              в том числе с реконструктивными методиками,
+            </li>
+            <li class="text--s team__direction_item">
+              Радикальная мастэктомия,
+            </li>
+            <li class="text--s team__direction_item">
+              Подкожная радикальная мастэктомия с одномоментной реконструкцией
+              эндопротезами (с установкой экспандера или постоянного протеза),
+            </li>
+            <li class="text--s team__direction_item">
+              Отстроченные реконструкции молочных желёз с использованием
+              эндопротезов и экспандеров,
+            </li>
+            <li class="text--s team__direction_item">
+              Реконструкция молочной железы с использованием собственных тканей
+              отсроченная и одномоментная,
+            </li>
+            <li class="text--s team__direction_item">
+              Биопсия сторожевых лимфоузлов при раке молочной железы и меланоме,
+            </li>
+            <li class="text--s team__direction_item">
+              Секторальная резекция и ампутация молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Хирургическое лечение гинекомастии,
+            </li>
+            <li class="text--s team__direction_item">
+              Восстановление сосково-ареолярного комплекса,
+            </li>
+            <li class="text--s team__direction_item">
+              Различные виды мастопексий и редукционных пластик молочных желез,
+              в том числе и симметризирующие после реконструкции пораженной
+              железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Удаление образований кожи с пересадкой кожных лоскутов на
+              сосудистой ножке.
+            </li>
+          </ul>
+        </div>
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/VPxp3-82WDU?si=vOMAK26rW3kX7-YT"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div data-team-details="4" class="team__detail visually-hidden">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">
+                Константинова Валерия Валерьевна
+              </h3>
+              <p class="text--s team__text">
+                Врач-хирург, маммолог онкологического отделения № 1
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс на
+                наб. р. Фонтанки, д. 154
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_4.b93657.jpg"
+            alt="Врач-хирург Константинова Валерия Валерьевна"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">
+              Диагностика и лечение рака молочной железы, онкопластическая
+              хирургия молочной железы, реконструктивная хирургия молочной
+              железы,
+            </li>
+            <li class="text--s team__direction_item">
+              Лекарственное лечение рака молочной железы - химиотерапия,
+              таргетная терапия, гормонотерапия, иммунотерапия,
+            </li>
+            <li class="text--s team__direction_item">
+              Реабилитация пациентов после завершения лечения рака молочной
+              железы: лечение осложнений хирургического лечения, лучевой
+              терапии,
+            </li>
+            <li class="text--s team__direction_item">
+              Первичная диагностика онкологических заболеваний.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-team-details="5" class="team__detail visually-hidden">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">Чебышева Ольга Алексеевна</h3>
+              <p class="text--s team__text">
+                Врач-онколог 2-ой квалификационной категории онкологического
+                отделения № 1
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс
+                на ул. Кораблестроителей, д. 20, к. 1
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_5.367aa9.jpg"
+            alt="Врач-онколог Чебышева Ольга Алексеевна"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">
+              профилактика и ранняя диагностика опухолей молочной железы,
+            </li>
+            <li class="text--s team__direction_item">
+              дифференциальная диагностика опухолевых заболеваний молочной
+              железы,
+            </li>
+            <li class="text--s team__direction_item">
+              заболевания грудных желез у мужчин.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-team-details="6" class="team__detail visually-hidden">
+        <div class="team__card">
+          <div class="team__wrapper">
+            <div class="team__card__wrapper">
+              <h3 class="title--s team__title">Тураханова Гульнора Тураевна</h3>
+              <p class="text--s team__text">
+                Врач пластический хируг онкологического отделения № 1
+              </p>
+              <p class="text--s team__text">
+                Ведёт приём: Лечебно-диагностический комплекс
+                на ул. Кораблестроителей, д. 20, к. 1
+              </p>
+            </div>
+            <a
+              class="team__card__button button button--contained"
+              href="https://online.gosmed.ru/"
+              target="_blank"
+            >
+              Запись на приём
+            </a>
+          </div>
+          <img
+            class="team__photo team__photo--big"
+            src="images/design/team_photo_6.b338bc.jpg"
+            alt="Врач пластический хируг Тураханова Гульнора Тураевна"
+          />
+        </div>
+        <div class="team__direction">
+          <h4 class="title-xs team__subtitle">Направление деятельности</h4>
+
+          <ul class="team__direction_list">
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция возрастных изменений лица и шеи,
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция периорбитальной области,
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция наружного носа с восстановлением функции
+              носового дыхания (ринопластика),
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция периоральной области,
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция ушных раковин (отопластика),
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция молочных желез,
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция туловища, конечностей,
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция наружных половых органов,
+            </li>
+            <li class="text--s team__direction_item">
+              Эстетическая коррекция рубцов (шрамов),
+            </li>
+            <li class="text--s team__direction_item">
+              Реконструктивные операции в области лица,
+            </li>
+            <li class="text--s team__direction_item">
+              Реконструкция ушной раковины,
+            </li>
+            <li class="text--s team__direction_item">
+              Реконструкция молочной железы после онкологических операций.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div id="faq" class="main__container">
+        <div class="main__faq faq">
+  <h2 class="title--m faq__title">Часто задаваемые вопросы</h2>
+  <div class="faq__columns">
+    <div class="faq__category">
+      <ul class="faq__list">
+        <li class="faq__item">
+          <button data-faq-category="cancer" class="faq__button  faq__button--active">
+            <span>Рак молочной железы</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="diagnos" class="faq__button">
+            <span>Диагностика образований молочной железы и кожи</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button
+            data-faq-category="hospitalization"
+            class="faq__button"
+          >
+            <span>Госпитализация</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="surgery" class="faq__button">
+            <span>Хирургическое лечение рака молочной железы</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="reconstruction" class="faq__button">
+            <span>Реконструкция груди</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="hormon" class="faq__button">
+            <span>Гормональная терапия</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="axis" class="faq__button">
+            <span>Лучевая терапия</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="chemestry" class="faq__button">
+            <span>Химиотерапия</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="target" class="faq__button">
+            <span>Таргетная терапия</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="treatment" class="faq__button">
+            <span>Лечение доброкачественных образований</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+        <li class="faq__item">
+          <button data-faq-category="oncodermology" class="faq__button">
+            <span>Онкодерматология</span>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="chevron-right 3">
+                <path
+                  id="Vector"
+                  d="M18 36L30 24L18 12"
+                  stroke="#FB9EB7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="faq__questions">
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Назначение даты госпитализации
+        </summary>
+        <p class="faq__question_answer">
+          Как правило, врач на очной /онлайн консультации определяет дату
+          госпитализации и выдает пациенту бланк с перечнем необходимых
+          обследований для госпитализации.
+        </p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие необходимы анализы для госпитализации?
+        </summary>
+        <p class="faq__question_answer">
+          Все необходимые обследования указаны данном файле (ссылка на
+          перечень). Представленный ниже перечень обследований
+          <b>является обязательным</b>. Если Вы прибудете на госпитализацию с
+          неполным перечнем обследований (некачественными обследованиями), к
+          сожалению, возникнут трудности с организацией лечения.
+        </p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какова длительность госпитализации?
+        </summary>
+        <p class="faq__question_answer">
+          В среднем сроки госпитализации составляют 3-5 суток, при наличии
+          медицинских показаний сроки могут быть увеличены.
+        </p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Возможно ли лечение по ОМС?
+        </summary>
+        <p class="faq__question_answer">Да, возможно.</p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Необходимо ли направление 057-у?
+        </summary>
+        <p class="faq__question_answer">
+          Нет. Если Вам одобрил врач нашего отделения оперативное лечение по
+          квоте, Вам необязательно брать направление (справку 057/у) по месту
+          жительства. Вас госпитализируют без него. Для выполнения в нашей
+          клинике таких исследований, как КТ (компьютерная томография),
+          МРТ(магнитно-резонансная томография) необходимо направление на
+          ДИАГНОСТИКУ форма 057у-04. Взять направление можно у онколога или
+          терапевта в поликлинике по месту прикрепления полиса ОМС.
+        </p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Сколько времени нужно ожидать госпитализации?
+        </summary>
+        <p class="faq__question_answer">
+         Пациенты с раком молочной железы являются первыми в очереди на операцию. В среднем ожидание госпитализации занимает менее 7 дней (при условии полностью пройденных обследований, необходимых для госпитализации).
+Для пациентов с доброкачественными образованиями срок ожидания составляет также 7 дней.
+        </p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что взять с собой в стационар?
+
+        </summary>
+        <p class="faq__question_answer">
+          - Документы (паспорт, полис, СНИЛС)
+          - Результаты обследований
+          - Лекарства, которые Вы принимаете на постоянной основе
+          - Предметы личной гигиены
+          - Личные вещи (халат, тапочки и т.д.)
+          *после операции на молочной железе нежелательна одежда, которая одевается через голову
+        </p>
+      </details> 
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Я-родственник пациента стационара, как и когда я могу его навестить?
+        </summary>
+        <p class="faq__question_answer">
+          С ПН по ПТ: с 15.00 до 20.00
+          СБ и ВС: с 10.00 до 13.00 и с 15.00 до 19.00
+        </p>
+      </details>
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Можно ли госпитализироваться для диагностического обследования?
+        </summary>
+        <p class="faq__question_answer">
+          Да, в рамках платных услуг возможна госпитализация на отделение для прохождения диагностических обследований (КТ, МРТ, УЗИ, маммография, ФГДС и тд)
+
+        </p>
+      </details> 
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Принимаете ли Вы на стационарное лечение граждан других стран?
+        </summary>
+        <p class="faq__question_answer">
+          Да, принимаем на платной основе.
+        </p>
+      </details> 
+      <details data-answer-category="hospitalization" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как быть, если я не могу приехать на госпитализацию в назначенный день?
+        </summary>
+        <p class="faq__question_answer">
+          Если вы не можете прибыть в указанный день и время, просим вас сообщить об этом заранее по телефону: 8-904-607-00-33
+        </p>
+      </details> 
+      <details data-answer-category="therapy" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Возможно ли сделать у вас операцию по поводу доброкачественного
+          образования молочной железы?
+        </summary>
+        <p class="faq__question_answer">
+          Да, возможно как в рамках ОМС, так и платно.
+        </p>
+      </details>
+
+      <details data-answer-category="cancer" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как возникает рак молочной железы?
+        </summary>
+        <p class="faq__question_answer">
+          <span>В основе развития рака молочной железы лежит изменение характера и
+          скорости деления клеток. В норме любые клетки, которые по структуре
+          отличаются от нормальных, подлежат немедленной ликвидации. За это
+          отвечает иммунная система. Если защитные силы работают недостаточно
+          активно, организм не может ликвидировать аномальную (раковую) клетку,
+          что и приводит к развитию онкологического процесса.</span> 
+          <span>Несколько факторов
+          могут увеличить риск возникновения рака молочной железы, такие как
+          генетические предрасположенности, наличие определенных мутаций генов
+          BRCA1 и BRCA2, а также возраст (старше 50 лет), плотность молочной
+          железы, уровень физической активности, потребление алкоголя, уровень
+          гормонов и т. д.</span>
+          <span>Важно отметить, что у большого количества людей с
+          высоким риском не развивается рак молочной железы, и наоборот,
+          некоторые люди с низким риском могут заболеть. Рак молочной железы –
+          это сложный процесс, и исследования по его причинам и факторам риска
+          продолжаются.</span>
+        </p>
+      </details>
+      <details data-answer-category="cancer" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие существуют виды рака молочной железы?
+        </summary>
+        <p class="faq__question_answer">
+          <span>Рак молочной железы — это обобщенное название группы патологических процессов (опухолей). Он может быть классифицирован на различные типы в зависимости от его характеристик. Первое — это биологическая структура, подтип образования. В зависимости от наличия рецепторов эстрогена и прогестерона на поверхности опухолевых клеток, эпидермального фактора роста типа 2 (HER2), количества активно размножающихся клеток (ki-67)  выделяют: люминальный А, Люминальный В HER2-негативный, Люминальный В HER2-позитивный, HER2-позитивный, трижды негативный.</span>
+          <span>Также виды рака молочной железы можно разделить на инвазивный и неинвазивный рак. Неинвазивный рак (карцинома in situ) – злокачественная опухоль, которая растет внутри долек и протоков молочной железы и не выходит за их пределы. Инвазивная карцинома- склонна к инвазии, прорастанию в окружающие ткани.  Важно отметить, что знание конкретного типа рака молочной железы играет решающую роль в выборе оптимального метода лечения.</span>
+        </p>
+      </details>
+      <details data-answer-category="cancer" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Симптомы РМЖ
+        </summary>
+        <p class="faq__question_answer">
+          <span>
+            Симптомы рака молочной железы неспецифичны и могут варьироваться у разных людей. В большинстве своем патологический процесс развивается постепенно. На начальных этапах, чаще всего, отсутствуют какие-либо симптомы, и, обычно, рак обнаруживается случайно, в ходе профилактического обследования.  В целом же клиническая картина рака молочной железы может включать:
+          </span>
+      ·  	Образование уплотнений или узлов в груди или подмышечной области.
+      ·  	Изменение размера или формы груди.
+      ·  	Изменения во внешнем виде сосков, такие как втяжение или уплотнение.
+      ·  	Выделения из сосков, которые могут  быть с примесью крови
+      ·  	Кожные изменения, такие как появление узелков или огрубения, покраснения
+      ·  	Боль или дискомфорт в груди или сосках.
+        <span>
+          По мере прогрессирования процесса наблюдаются симптомы общей интоксикации организма. Возможны такие признаки как: слабость; повышение температуры тела (высокие показатели держатся постоянно или большую часть времени); снижение работоспособности и общее недомогание.
+        </span>
+        <span>
+          Важно помнить, что эти симптомы могут быть вызваны иными состояниями, нежели рак молочной железы. Однако если у вас возникли подобные симптомы, важно обратиться к врачу для проведения диагностики и определения подлинной причины. Раннее обращение за медицинской помощью значительно увеличивает шансы на успешное лечение рака молочной железы.
+        </span>
+      </p>
+      </details>
+      <details data-answer-category="cancer" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Стадии РМЖ
+        </summary>
+        <p class="faq__question_answer">
+          <span>Рак молочной железы, как и многие другие виды рака, обычно классифицируется по стадиям. Общепринятая система стадирования рака молочной железы включает в себя следующие стадии:</span>
+          ·  	Стадия 0: это некоторые предраковые состояния, которые обычно называют раком in situ (то есть рак на месте) или неинвазивным раком. Это означает, что изменения клеток произошли только определенном участке ткани и не проросли в окружающую ее ткань;
+          ·  	Стадия I: Рак находится только в груди и имеет диаметр менее 2 см. Опухоль хорошо отграничена, отдаленных метастазов нет.
+          ·  	Стадия II: Рак может быть либо размером более 2 см, но не более 5 см, и/или может иметь распространение на окружающие лимфатические узлы;
+          ·  	Стадия III: Рак обычно уже довольно крупного размера, более 5 см, а также может быть распространен на лимфатические узлы и близлежащие ткани;
+          ·  	Стадия IV: На этой стадии рак молочной железы уже распространился на другие органы тела, такие как легкие, печень, кости или мозг.
+          <span>
+            Это общая классификация, которая используется для оценки распространения рака молочной железы в организме. Каждый случай индивидуален, и стадия рака влияет на лечение. Важно понимать, что стадирование имеет наибольшее значение с точки зрения прогнозов. Чем раньше будет начато лечение, тем выше процент выживаемости. Потому так важно начинать раннюю терапию патологического состояния.
+          </span>
+        </p>
+      </details>
+      <details data-answer-category="cancer" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Прогноз при РМЖ
+        </summary>
+        <p class="faq__question_answer">
+          <span>Прогноз при раке молочной железы зависит от многих факторов, включая стадию рака, тип и гистологическую структуру опухоли, гормональный статус опухоли, возраст пациента, общее состояние здоровья и наличие метастазов.</spanp>
+          <span>Чем раньше рак обнаружен и начато лечение, тем лучше прогноз. Лечение ранних стадий рака молочной железы, как правило, более эффективно, и шансы на выздоровление выше. Если рак обнаружен исключительно внутри молочной железы, пятилетняя выживаемость обычно очень высока. Однако, если рак был обнаружен на поздних стадиях, когда он уже распространился на другие части тела, прогноз может быть менее благоприятным. Обязательно следует обсудить свой индивидуальный прогноз с врачом, так как только он сможет оценить все аспекты вашего заболевания и дать более точное представление о возможных методах лечения и поддержки.</span>
+        </p>
+      </details>
+      <details data-answer-category="diagnos" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Можно ли у вас выполнить биопсию образования молочной железы?
+        </summary>
+        <p class="faq__question_answer">
+          Да, мы  проводим все виды  биопсий для наиболее тщательной диагностики природы образований и в случае необходимости, начала лечения в наиболее ранние сроки.  
+        </p>
+      </details>
+      <details data-answer-category="diagnos" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Можно ли у вас выполнить биопсию образования кожи?
+        </summary>
+        <p class="faq__question_answer">
+          Безусловно, доктора нашего отделения выполняют различные виды биопсий образований кожи (панч-биопсия, соскоб образования, инцизионная биопсия)  в зависимости от клинической картины каждого конкретного случая.
+        </p>
+      </details>
+      <details data-answer-category="diagnos" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Чем отличается трепан-биопсия от тонкоигольной аспирационной биопсии? Что такое панч-биопсия? Какая необходима в моем случае?
+        </summary>
+        <p class="faq__question_answer">
+          Биопсия применяется как наиболее информативный метод диагностики природы образования. При осмотре, исходя из клинической картины и результатов исследования (УЗИ молочных желез, ММГ, МРТ молочных желез, а в случаях образований кожи - результатов дерматоскопии), строго индивидуально подбирается одна из методик диагностики. Так, например, тонкоигольная аспирационная биопсия с последующим цитологическим исследованием применяется при диагностике кист и фиброаденом. Её преимуществами являются небольшой диаметр иглы и как следствие - безболезненность. Однако, при повышенной чувствительности молочных желез, либо низком болевом пороге возможно её проведение под местной анестезией. Трепан-биопсия выполняется иглой большего диаметра, что позволяет получить фрагмент тканей, необходимый  для более тщательного гистологического, а при необходимости и иммуногистохимического анализа, и как следствие, более чёткого понимания природы образования. Для точности исследования все вышеуказанные процедуры проводятся под УЗ-наведением.
+          Панч-биопсия используется как высокоинформативный метод диагностики образований кожи, при котором забирается измененный участок для гистологического исследования . В отдельных случаях, этот метод используется как лечебный при возможности забрать весь участок.
+          Хотелось бы отдельно отметить регулярные слова благодарности пациентов за абсолютную безболезненность при проведении биопсии, благодаря  чуткому отношению наших докторов и эффективную местную анестезию.
+        </p>
+      </details>
+      <details data-answer-category="diagnos" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Сколько времени ожидать результат трепан-биопсии и как мне сообщат о готовности?
+        </summary>
+        <p class="faq__question_answer">
+          С момента проведения процедуры взятия материала, до получения результатов гистологического исследования проходит около 4-5 дней. Наши доктора находятся в тесной связи с пациентами, поэтому о готовности анализа каждому пациенту сообщается лично по телефону, после чего назначается повторный осмотр для интерпретации результатов и обсуждения дальнейшей тактики лечения или наблюдения.
+
+        </p>
+      </details>
+
+
+      <!-- surgery -->
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          В каких случаях возможно сохранить грудь при лечении рака?
+        </summary>
+        <p class="faq__question_answer">
+          В настоящее время, по всему миру существует тенденция к уменьшению объема хирургических вмешательств при раке молочной железы. Докторами нашей клиники выполняется большой спектр реконструктивно-пластических операций, что позволяет достичь наиболее желанного эстетического результата.
+        </p>
+      </details>
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое мастэктомия и кому она показана?
+        </summary>
+        <p class="faq__question_answer">
+          Мастэктомия - хирургическая операция по удалению молочной железа и подмышечных лимфатических узлов. Объем операции определяется исключительно индивидуально, исходя из размеров опухоли, стадии заболевания, результатов иммуногистохимического анализа, наличия BRCA  мутаций, расположения образования, размера молочной железы.
+        </p>
+      </details>
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое сигнальный лимфатический узел?
+        </summary>
+        <p class="faq__question_answer">
+          Сигнальный лимфатический узел - узел, который стоит первым на пути оттока лимфы от органа.
+        </p>
+      </details>
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Кому делается биопсия сигнальных лимфатических узлов? В чем её отличие от подмышечной лимфодиссекции?
+        </summary>
+        <p class="faq__question_answer">
+          Биопсия сигнальных лимфатический узлов выполняется пациентам, у которых по результатами иммуногистохимического исследования был определен люминальный подтип опухоли. В отличие от подмышечной лимфодиссекции, при данной операции удаляется 1-2 лимфатических узла, что полностью значительно снижает риски послеоперационных осложнений.        </p>
+      </details>
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+         Что такое лимфедема? Какие меры профилактики лимфедемы?
+        </summary>
+        <p class="faq__question_answer">
+          Лимфедема - это постепенное увеличение объема конечности вследствие нарушения оттока лимфы и ее последующего скопления в межклеточном пространстве. Лимфедема, как осложнение при хирургическом лечении рака молочной железы крайне редкое явление при соблюдении элементарных мер профилактики:
+          - ограничение нагрузок на больную конечность. Стоит отметить, что объем движений после операции никак не страдает. Также возможны  нормированные физические нагрузки при ношении компрессионного рукава (второй класс компрессии);
+          - исключение в/в инъекций, забора крови с конечности на стороне операции;
+          - нежелательно измерение давления на больной руке;
+        </p>
+      </details>
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Мне будет больно после операции?
+        </summary>
+        <p class="faq__question_answer">
+          Нет. Для снижения болевого синдрома в  нашей клинике проводится комплекс мероприятий, таких как премедикация перед операцией, высокий уровень работы анестезиологов,  дозированное назначение анальгетиков после
+        </p>
+      </details>
+      <details data-answer-category="surgery" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Будет ли у меня возможность связаться с вами после выписки из стационара?
+        </summary>
+        <p class="faq__question_answer">
+          Обязательно! Мы находимся в тесной связи с нашими пациентами не только  после выписки, но и в дальнейшем, когда пациент проходит послеоперационное лечение или находится на диспансерном наблюдении.
+        </p>
+      </details>
+
+
+      <!-- hormon -->
+      <details data-answer-category="hormon" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое гормональная терапия?
+        </summary>
+        <p class="faq__question_answer">
+          Гормональная терапия показана пациентам с люминальными молекулярными подтипами опухолей. На поверхности таких опухолей есть рецепторы к женским половым гормонам - эстрогену и прогестерону, которые стимулируют рост злокачественной опухоли. Цель гормональной терапии заключается в подавлении этого стимулирующего влияния и, следовательно, профилактике рецидива после операции или при лечении метастатического рака молочной железы.
+        </p>
+      </details>
+      <details data-answer-category="hormon" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие побочные эффекты от гормональной терапии?
+        </summary>
+        <p class="faq__question_answer">
+          Побочные эффекты гормональной терапии зависят от группы препаратов, которые используются в лечении. Так, при применении антиэстрогенов (тамоксифен, торемифен) повышается риск тромбообразования и атипической гиперплазии эндометрия. Поэтому пациентам в группе риска тромбоэмболических осложнений не следует использовать данные препараты. На фоне приема антиэстрогенов обязательно регулярно посещать гинеколога с оценкой толщины эндометрия с периодичностью 1 раз в 6 месяцев. Еще одна распространенная группа препаратов - ингибиторы ароматазы (анастрозол, летрозол, эксеместан). На фоне приема этих препаратов увеличивается риск остеопороза, поэтому необходимо осуществлять профилактику - принимать препараты кальция и витамина D, а также 1 раз в год выполнять остеоденситометрию для оценки минеральной плотности костей. Также для профилактики остеопороза часто применяется золедроновая кислота - внутривенно капельно 1 раз в 6 месяцев.
+        </p>
+      </details>
+      <details data-answer-category="hormon" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как долго длится гормональная терапия?
+        </summary>
+        <p class="faq__question_answer">
+          Стандартная продолжительность гормонотерапии после радикального лечения (при I-III стадии) заболевания составляет 5 лет. В случае наличия факторов риска, определяемых Вашим врачом, длительность гормонотерапии может увеличиваться до 7-10 лет. В случае лечения метастатического рака молочной железы (IV стадия) лечение проводится до прогрессирования заболевания.
+        </p>
+      </details>
+
+      <!-- axis -->
+      <details data-answer-category="axis" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Почему нужна лучевая терапия после органосохраняющей операции?
+        </summary>
+        <p class="faq__question_answer">
+          Даже после идеально выполненной операции в ткани молочной железы могут оставаться микроскопические опухолевые клетки, не видимые глазом. Лучевая терапия проводится на всю молочную железу и уничтожает эти клетки. Многочисленными исследованиями доказано, что органосохраняющая операция в комбинации с лучевой терапией равно эффективна полному удалению молочной железы - мастэктомии, поэтому всем пациентам после органосохраняющей операции назначается лучевая терапия (исключение составляют пациенты старше 70 лет с I стадией заболевания и люминальным подтипом опухоли).
+        </p>
+      </details>
+      <details data-answer-category="axis" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Когда следует начинать лучевую терапию?
+        </summary>
+        <p class="faq__question_answer">
+          Лучевая терапия назначается в сроки от 4 до 12 недель после операции при условии полного заживления послеоперационных ран. При невозможности начать лучевую терапию в указанные сроки эффективно проводить лучевую терапию не позднее 6 месяцев после операции. При необходимости адъювантной химиотерапии после операции лучевая терапия проводится через 3-4 недели после завершения лекарственной терапии (исключение составляют капецитабин и олапариб, которые назначаются после лучевой терапии).
+        </p>
+      </details>
+      <details data-answer-category="axis" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какова продолжительность лучевой терапии?
+        </summary>
+        <p class="faq__question_answer">
+          Продолжительность лучевой терапии зависит от режима фракционирования. Фракционирование - это разделение суммарной эффективной дозы облучения на сеансы, что позволяет безопасно подвести требуемую дозу облучения, не вызывая лучевых осложнений. В лечении рака молочной железы используются два режима: традиционный и гипофракционирование. При традиционном режиме разовая доза составляет 1,8-2,0 Грей, количество сеансов - 25, суммарная доза облучения 48-50 Грей и по продолжительности занимает около 5 недель. В режиме гипофракционирования разовая доза облучения увеличивается, что позволяет подвести суммарную дозу за меньшее количество сеансов. Применяются разные варианты гипофракционирования: 18 сеансов по 2,5 Грей, 16 сеансов по 2,66 Грей, 15 сеансов по 2,67 Грей, 5 сеансов по 6 Грей. Выбор режима фракционирования определяет врач-радиотерапевт на основании возраста пациента, объема облучения, правой или левой молочной железы и других факторов.
+        </p>
+      </details>
+      <details data-answer-category="axis" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие побочные эффекты могут быть после лучевой терапии?
+        </summary>
+        <p class="faq__question_answer">
+          Лучевая терапия наряду с хирургией является локальным методом лечения, поэтому побочные эффекты от лучевой терапии по больше степени затрагивают облучаемую область. После лучевой терапии при раке молочной железы могут наблюдаться покраснение кожи (по типу солнечного ожога), отечность, сухость, а также зуд и уплотнение кожи молочной железы. В редких случаях облучение молочной железы может приводить к фиброзу в легких или нарушению сердечной деятельности, однако при правильной разметке лучевая терапия безопасна, так как доза облучения рассчитывается так, чтобы минимально затрагивать здоровые ткани.
+        </p>
+      </details>
+
+      <!-- chemestry -->
+      <details data-answer-category="chemestry" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое химиотерапия?
+        </summary>
+        <p class="faq__question_answer">
+          Химиотерапия - это метод системного лечения злокачественных опухолей, при которой применяются лекарственные препараты, нарушающие рост и деление опухолевых клеток - фактически, разрушая их. Химиопрепараты применяются системно (в основном, внутривенно и в некоторых случаях в виде таблеток), поэтому химиотерапия воздействует на все опухолевые клетки, которые есть в организме - как в первичной опухоли, так и на микрометастазы, которые еще не видимы глазом, но могут циркулировать в крови.
+        </p>
+      </details>
+      <details data-answer-category="chemestry" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Будет ли у меня химиотерапия?
+        </summary>
+        <p class="faq__question_answer">
+          Решение о проведении химиотерапии принимается на основании размера первичной опухоли, наличия пораженных лимфатических узлов и гистологических характеристик опухоли. В некоторых случаях опухоль необходимо уменьшить для того, чтобы провести более эстетически приемлемую операцию, в других - необходимо посмотреть, как опухоль реагирует на химиотерапию до операции, чтобы иметь возможность скорректировать послеоперационное лечение. Иногда необходимость проведения химиотерапии определяется уже после операции, если по результатам гистологического исследования послеоперационного материала был выявлен более агрессивный молекулярный подтип или метастатически пораженные лимфатические узлы.
+        </p>
+      </details>
+      <details data-answer-category="chemestry" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое неоадъювантная (предоперационная) химиотерапия?
+        </summary>
+        <p class="faq__question_answer">
+          Неоадъювантная химиотерапия - это вид лекарственного лечения, проводимый ДО операции. Целью неоадъювантной химиотерапии является уменьшение размера опухоли для того, чтобы выполнить менее обширную и более эстетически приемлемую операцию, или оценить ответ опухоли на лечение, чтобы иметь возможность скорректировать послеоперационную терапию в случае недостаточного ответа. Химиотерапия перед операцией проводится при высоком риске рецидива, определяемому по сочетанию нескольких факторов, в том числе при молодом возрасте пациентки, большой первичной опухоли, а также при агрессивных молеклярных подтипах, таких как трижды-негативный и HER2-позитивный.
+        </p>
+      </details>
+      <details data-answer-category="chemestry" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое адъювантная (послеоперационная) химиотерапия?
+        </summary>
+        <p class="faq__question_answer">
+          Адъювантная химиотерапия проводится ПОСЛЕ операции, когда первичной опухоли в организме уже нет. Цели адъювантной химиотерапии отличаются от неоадъювантной и направлены на профилактику рецидива заболевания после радикального лечения. После проведенной операции и лучевой терапии в кровотоке могут оставаться невидимые глазом микроскопические опухолевые клетки, которые невозможно убрать с помощью местного воздействия. Обладая системным эффектом, адъювантная химиотерапия воздействует на все опухолевые клетки, находящиеся в организме и разрушает их, таким образом снижая вероятность возврата заболевания.
+        </p>
+      </details>
+      <details data-answer-category="chemestry" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как долго длится химиотерапия?
+        </summary>
+        <p class="faq__question_answer">
+          Длительность химиотерапии зависит от молекулярного подтипа опухоли и выбранной схемы лечения. Курс химиотерапии может состоять из 4-х, 6-ти или 8-ми циклов в зависимости от схемы. В понятие “цикл” входит промежуток времени между введениями химиопрепаратов и по продолжительности может занимать 2 или 3 недели (возможен еженедельный режим введения в случае Паклитаксела). Таким образом, стандартная “красно-белая” химиотерапия состоит из 8 циклов (4 “красных - доксорубицин+циклофосфамид, и 4 “белых” - паклитаксел или доцетаксел) с промежутком в 3 недели, то есть всего продолжительность составит 24 недели (6 месяцев), или с промежутком в 2 недели - 16 недель (4 месяца).
+        </p>
+      </details>
+      <details data-answer-category="chemestry" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Потеряю ли я волосы?
+        </summary>
+        <p class="faq__question_answer">
+          Механизм действия химиотерапии состоит в разрушении клеток, которые быстро делятся (“размножаются”) - к ним относятся клетки опухоли. К сожалению, в организме не только опухолевые клетки быстро делятся, но также и клетки волосяных фолликулов, эпителия кишечника и клетки костного мозга. Именно поэтому на фоне химиотерапии пациенты теряют волосы, иногда страдают от кишечных расстройств и вынуждены контролировать анализы крови. Есть некоторая вероятность, что волосы выпадут не полностью, однако такие случаи скорее исключение, чем правило. Поэтому после 2-3 цикла химиотерапии волосы начнут заметно выпадать, однако по завершении химиотерапии вновь начинают отрастать, поэтому ситуация обратима.
+        </p>
+      </details>
+
+      <!-- target -->
+      <details data-answer-category="target" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое таргетная терапия? Кому назначается таргетная терапия?
+        </summary>
+        <p class="faq__question_answer">
+          Таргетная терапия (от английского “target” - “цель, мишень”) - метод системного лечения, направленный на специфические рецепторы на поверхности опухолевой клетки. Некоторые опухоли молочной железы имеют на своей поверхности большое количество рецепторов к онкобелку HER2neu. Таргетная терапия направлена именно на эти рецепторы, что обусловливает ее избирательное действие на опухоль и невысокую токсичность лечения.
+        </p>
+      </details>
+      <details data-answer-category="target" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие побочные эффекты у таргетной терапии?
+        </summary>
+        <p class="faq__question_answer">
+          Частота побочных эффектов у пациентов на таргетной терапии значительно ниже, чем при проведении химиотерапии, однако у каждого лекарственного препарата побочные эффекты все же могут встречаться. Основными побочными эффектами таргетной анти-HER2 терапии являются кардиотоксичность (влияние на сердце), кожная сыпь и диарея. Кардиотоксичность может проявляться в снижении функции сердца (фракции выброса), что может не вызывать симптомов, однако на фоне таргетной терапии обязательно необходимо выполнять эхокардиографию (УЗИ сердца) 1 раз в 3 месяца. Кожная сыпь чаще всего может проявляться при применении пертузумаба, а диарея - при лапатинибе. При появлении побочных эффектов - проконсультируйтесь со своим лечащим врачом, который подберет вам сопроводительную терапию.
+        </p>
+      </details>
+      <details data-answer-category="target" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Если таргетная терапия работает только против опухолевых клеток, то почему у меня возникают побочные эффекты?
+        </summary>
+        <p class="faq__question_answer">
+          К сожалению, у каждого лекарственного препарата могут возникать побочные эффекты и таргетная терапия - не исключение. Частота и выраженность побочных эффектов при таргетной терапии значительно ниже, чем при химиотерапии, поэтому таргетная терапии обладает более избирательным действием.
+        </p>
+      </details>
+
+      <!-- oncodermology -->
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое меланома и как ее диагностировать?
+        </summary>
+        <p class="faq__question_answer">
+          Меланома – это злокачественная опухоль, развивающаяся из меланоцитов (клеток, синтезирующих пигмент меланин). Чаще всего она возникает на неизмененной коже, реже в области меланоцитарных невусов– «родинках».
+          Первичная диагностика меланомы происходит с помощью дерматоскопии (оптическая система с многократным увеличением), которая позволяет заподозрить злокачественное образование кожи. Однако основным достоверным признаком диагностики является –гистологический.
+        </p>
+      </details>
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое базалиома?
+        </summary>
+        <p class="faq__question_answer">
+          Базалиома (базальноклеточная карцинома) кожи - это злокачественное образование кожи, развивающееся из атипичных клеток базального слоя эпидермиса (кератиноцитов). Стоить отметить, что из всех ЗНО кожи базальноклеточная карцинома не дает метастазов, развивается крайне медленно, годами. На начальном этапе представляет из себя розовое или телесного цвета пятнышко, сверху которого могут образовываться корочки, оно может кровоточить и чесаться, превращаясь в незаживаемую рану.
+        </p>
+      </details>
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как лечится базальноклеточный рак кожи?
+        </summary>
+        <p class="faq__question_answer">
+          Существует много различных методов лечения, такие как лучевая терапия, фотодинамическая терапия, лазерная деструкция, криотерапия. Однако есть только один метод радикального лечения –это хирургический. Онколог вам может предложить все существующие методы, но пациент сам выбирает тот или иной метод лечения.
+        </p>
+      </details>
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что делать после радикально удаления меланомы кожи?
+        </summary>
+        <p class="faq__question_answer">
+          Обязательный динамический контроль, который включает в себя осмотр всех кожных покровов и использованием дерматоскопа, УЗИ регионарных лимфатических узлов, органов малого таза и брюшной полости, анализы крови на ЩФ, ЛДГ, витамин Д раз в 3 месяца в первый год после радикального удаления меланомы.
+        </p>
+      </details>
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Красное образование на коже, что это?
+        </summary>
+        <p class="faq__question_answer">
+          Это так называемая гемангиома – доброкачественное образование, возникающее из клеток эндотелия кровеносных сосудов. По своей сути это порок развития кожи, который не представляет опасности для жизни. Лечение довольно простое – склирозирование (запаивание) питающего сосуда.
+        </p>
+      </details>
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое кератома и как ее лечить?
+        </summary>
+        <p class="faq__question_answer">
+          Кератома- это доброкачественное образование кожи, образующееся вследствие более плотного прилегания роговых частиц и усиления процесса кератинизации эпидермального слоя.  Чаще всего они образуются у людей после 40 лет и подвергающимся солнечному излучению. Кератома представляет собой коричневого или желтого цвета бляшку с шелушащейся поверхностью. Они могут чесаться, при травматизации отваливаться, образуя розовое пятнышко, затем на этом месте вновь могут образовываться кератома. Редко они бывают единичными, чаще всего множественные. Диагностировать кератому можно как визульно, так и с помощью дерматоскопии. Лечению они подлежать в единственном случае – это желание пациента  удалить образование с этетической точки зрения.
+        </p>
+      </details>
+      <details data-answer-category="oncodermology" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Возрастают ли риски рака кожи, если была другая онкология?
+        </summary>
+        <p class="faq__question_answer">
+          Чаще всего нет. Меланома и рак кожи – это самостоятельные заболевания, у которых нет прямой зависимости с другими онклогическими заболеваниями. Но есть ряд случаев, когда лечение другого злокачественного образования вызывает рак кожи. Например, химиотерапия, лучевая терапия могут стать причиной иммунодефицита – а это считается одним из этиологических факторов риска рака кожи и меланомы. В связи с этим после завершения лечения необходимо проводить осмотр кожных покровов и  дерматоскопию всех образований кожи не реже 1 раза в год.
+        </p>
+      </details>
+
+      <!-- treatment -->
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Возможно ли сделать у вас операцию по поводу доброкачественного образования молочной железы?
+        </summary>
+        <p class="faq__question_answer">
+          Да, возможно как в рамках ОМС, так и платно.
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое ВАБ (вакуум-аспирационная биопсия)?
+        </summary>
+        <p class="faq__question_answer">
+          Вакуум-аспирационная биопсия (ВАБ) - это малоинвазивная методика, позволяющая подтвердить диагноз и выполнить полное удаление доброкачественных новообразований молочной железы. ВАБ – прекрасная альтернатива секторальной резекции. С 2022 г. в нашем отделении выполнено более 100 вакуум-аспирационных биопсий с успешным удалением новообразований. После данной лечебно-диагностической манипуляции не требуется период реабилитации и нет косметических дефектов. За одну процедуру ВАБ позволяет удалить образования в обеих молочных железах и несколько образований в одной железе через один прокол.
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие показания и противопоказания для проведения ВАБ?
+        </summary>
+        <p class="faq__question_answer">
+          Показания к ВАБ молочной железы могут быть как диагностические, так и лечебные: 
+        ·   	непальпируемые и пальпируемые новообразования молочной железы до 2,0 см (от 2,0 до 2,5 см возможность удаления определяется врачом в каждом конкретном случае);  
+        ·   	атипичная протоковая и дольковая гиперплазия;  
+        ·   	фиброаденома;  
+        ·   	внутрипротоковая папиллома;  
+        ·   	доброкачественные новообразования перед планированием беременности и ЭКО;  
+        ·   	доброкачественные новообразования, увеличивающиеся в размерах при динамическом наблюдении;  
+        ·   	радиальный рубец;  
+        ·   	склерозирующий аденоз;  
+        ·   	рецидивирующие кисты.
+        Противопоказания к проведению ВАБ молочной железы :
+        ·   	образования, располагающиеся подкожно;  
+        ·   	отсутствие визуализации образования при УЗИ молочной железы;  
+        ·   	подтвержденное злокачественное новообразование;  
+        ·   	размер образования более 2,5 см;  
+        ·   	воспалительный процесс;  
+        ·   	заболевания свертывающей системы крови. 
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие преимущества у ВАБ?
+        </summary>
+        <p class="faq__question_answer">
+          - сохранение формы молочной железы;  
+          - быстрое одномоментное удаление нескольких образований;  
+          - отсутствие косметических дефектов;  
+          - не требует реабилитации;  
+          - амбулаторные условия выполнения;  
+          - психологический комфорт;  
+          - одномоментное достижение лечебного и максимального косметического эффекта. 
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Что такое киста молочной железы (киста груди)?
+        </summary>
+        <p class="faq__question_answer">
+          Киста молочной железы – это отграниченное скопление жидости в молочной железе. В протоковой системе молочной железы постоянно секретируется и реабсорбируется (обратно всасывается) жидкость. Когда проток блокируется или количество жидкости становится больше, чем количество реабсорбиремой, то жидкость накапливается и формируется киста.
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Кисты злокачественные?
+        </summary>
+        <p class="faq__question_answer">
+          Кисты груди как правило не являются злокачественными, и наличие кист существенно не увеличивает риск развития рака. Существует редкое заболевание, называемое интракистозным раком, когда внутри кисты развивается рак, но эти кисты выглядят необычно на УЗИ, и при цитологическом исследовании содержимого этих кист можно выявить опухолевые клетки. Кисты могут представлять угрозу с той точки зрения, что женщины с множественными кистами могут расслабиться по поводу образований в молочной железе и должным образом не проверяться. Это может привести к запоздалой диагностике.
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+           Как лечат кисты?
+        </summary>
+        <p class="faq__question_answer">
+          Мелкие кисты, которые не вызывают симптомов и по данным УЗИ/маммографии не вызывают онконастороженность у врача - не требуют лечения. В случаи сомнений и подозрений в характере образования необходимо выполнить вакуум аспирационную биопсию (ВАБ). В ходе процедуры, желательно под контролем УЗИ, игла вводится в полость кисты и откачивается содержимое. Если в кисте водянистая жидкость, она может исчезнуть после процедуры. Если содержимое густое, то не всегда удается ее откачать. Это не повод для беспокойства. Желательно содержимое кисты отправить на цитологическое исследование и убедиться, что клеток рака нет. Если у женщины множество мелких кист, то маммолог может рекомендовать динамическое наблюдение с периодическим УЗИ.
+          Нет единого мнения о том, как лечить кисты груди, которые вызывают жалобы. Некоторые врачи считают, что если киста прощупывается, то следует его пунктировать. Другие считают, что, если она имеет вид типичной кисты, ее можно оставить под наблюдением. Кисты, которые являются болезненными, часто пунктируют, чтобы уменьшить дискомфорт.
+          Для удаления кисты редко рекомендуется хирургическое вмешательство. Обычно только те кисты, которые рецидивируют после повторных пункций или вызывают подозрения на злокачественный характер, должны быть удалены хирургически.
+        </p>
+      </details>
+      <details data-answer-category="treatment" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Могут ли кисты вернуться?
+        </summary>
+        <p class="faq__question_answer">
+          Кисты могут повторно появиться после аспирационной биопсии или могут развиваться новые кисты в близлежащих тканях молочной железы
+        </p>
+      </details>
+
+      <!-- reconstruction -->
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как восстановить грудь после мастэктомии?
+        </summary>
+        <p class="faq__question_answer">
+          Учитывая, что после мастэктомии (полного удаления молочной железы) имеется дефицит покровных тканей, реконструкция проходит в 2 этапа. На первой операции врач устанавливает под мышцу экспандер, который имеет специальную мембрану для его заполнения физиологическим раствором в течение нескольких недель. После полного расширения экспандер остается в таком состоянии около 6 месяцев, чтобы ткани и кожа смогли растянутся. Затем врач проводит вторую операцию, на которой заменяет экспандер на постоянный имплант. Иногда женщины, которые перенесли мастэктомию только одной молочной железы, совмещают вторую реконструктивную операцию и подтяжку или увеличение здоровой груди, чтобы обе молочные железы выглядели симметрично.
+          Планировать реконструкцию следует по прошествии не менее полугода после мастэктомии и не менее 8 месяцев после лучевой терапии.
+          Решение о реконструкции груди после мастэктомии зависит от пациентки. Кто-то чувствует себя комфортно и без молочной железы, некоторые чувствуют себя лучше после реконструкции.
+          Если пациентка решает не делать реконструкцию, есть возможность использования внешних протезов, бюстгальтеров с наполнителями или специальных пластичных материалов для создания иллюзии обычной груди.
+          Важно обсудить все возможности с лечащим врачом и выбрать наиболее подходящий метод восстановления в вашем случае.
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          В каких случаях можно провести реконструкцию одновременно с мастэктомией?
+        </summary>
+        <p class="faq__question_answer">
+          Показаниями для одномоментной реконструкции молочной железы имплантами являются:
+          - стадия заболевания, которая позволяется выполнить подкожную мастэктомию
+          - анатомические особенности пациентки
+          - желание пациентки
+          - отсутствие показаний для проведения лучевой терапии в послеоперационном периоде (облучение может повысить риск осложнений после установки имплантов)
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Какие существуют методы реконструкции?
+        </summary>
+        <p class="faq__question_answer">
+          - с использованием искусственных материалов (имплантов)
+          - с использованием собственных тканей, взятых с других частей тела (лоскутов)
+          Иногда используется комбинация этих методов.
+          Выбор методы реконструкции обсуждается с лечащим врачом и зависит от нескольких факторов:
+          - стадия заболевания
+          - планируемое лечение после операции
+          - изначальный размер молочной железы
+          - анатомические особенности пациентки
+          - наличие сопутствующих заболеваний
+          - курение
+          - перенесенные в течение жизни операции
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Будет ли восстановленная грудь соответствовать моей здоровой груди? Следует ли корректировать другую грудь?
+        </summary>
+        <p class="faq__question_answer">
+          Восстановленная грудь будет соответствовать второй насколько это возможно. Восстановленная молочная железа не будет на 100% такой же, как и раньше или точно такой же, как вторая непрооперированная железа. Кроме того, в реконструированной железе не будет прежней чувствительности.
+          При необходимости возможна эстетическая коррекция формы и размера второй молочной железы – устранение ее обвисания (птоза), исправление формы и размера. Результат таких операций – не просто восстановление отсутствующей, но создание максимально естественной, красивой, пропорциональной по форме и размеру груди.
+        </p>
+      </details>
+       <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как восстановить ареолу и сосок?
+        </summary>
+        <p class="faq__question_answer">
+          Существует большое разнообразие вариантов реконструкции сосково-ареолярного комплекса. Выбор техники осуществляется хирургом в зависимости от показаний, а также ориентируясь на форму и размер сосково-ареолярного комплекса здоровой молочной железы.
+          Чаще всего восстановление соска выполняется из окружающих тканей на месте(пластика местными тканями) , что предварительно определяется в соответствии с анатомическими ориентирами. Хирург по схеме делает небольшие надрезы, а затем приподнимает ткань и придает форму, имитирующую сосок.
+        	Обычно операции по восстановлению соска выполняют через несколько месяцев после реконструкции молочной железы, после полного заживления.
+        	Также альтернативой реконструкции является татуаж.
+        </p>
+      </details>
+       <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Опасна ли реконструкция груди?
+        </summary>
+        <p class="faq__question_answer">
+          Для большинства женщин, имеющих хорошее общее состояние здоровья, реконструкция груди может быть безопасной и успешной процедурой, помогающей восстановить самооценку и улучшить качество жизни после лечения рака молочной железы. Однако, как и при любой хирургической процедуре, существуют риски, которые нужно учитывать.
+          Некоторые возможные осложнения, связанные с реконструкцией груди, могут включать в себя инфекции, кровотечения с формированием гематом, проблемы с заживлением ран, изменение или потерю чувствительности в области груди 
+          Зачастую, операции на молочной железе осложняются развитием серомы. Серома представляет собой скопление серозной жидкости в послеоперационной области. Образование серомы может замедлить реабилитацию. Эта проблема решается удалением жидкости с помощью шприца под контролем УЗИ или без. Риск развития серомы увеличивается при ожирении, обширном хирургическом вмешательстве и интенсивных физических упражнениях сразу после операции.
+          Кроме того, в отдаленном периоде, возможно формирование капсулярной контрактуры. При установке грудного импланта вокруг него образуется капсула из фиброзной ткани. Капсула обычно тонкая и не вызывает никаких симптомов, но в некоторых случаях она может стать более плотной, что вызывает боль и деформацию молочной железы. Единственное лечение — хирургическое, оно включает замену импланта с полным удалением капсулы.
+          Одним из самых серьёзных осложнений является редкая Т-клеточная лимфома (ALCL) возникающая вокруг имплантов молочной железы с текстурированной поверхностью. В мире зарегистрировано всего 1130 случаев данного заболевания. Чаще всего оно проявляется скоплением жидкости в капсуле импланта через несколько лет после его установки. Пациентам с анапластической крупноклеточной лимфомой рекомендовано хирургическое лечение, включающее удаление имплантата и капсулы.
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Будет ли реконструкция мешать лучевой терапии?
+        </summary>
+        <p class="faq__question_answer">
+          Лучевая терапия - неотъемлемый компонент лечения рака молочной железы, однако ее проведение после реконструкции молочной железы значительно увеличивает число осложнений, в частности, капсулярных контрактур. Поэтому в большинстве случаев реконструктивные операции проводятся после лучевой терапии.
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+           Как моя восстановленная грудь будет ощущаться на ощупь?
+        </summary>
+        <p class="faq__question_answer">
+          Как и в любой хирургической процедуре, результат реконструкции молочной железы может варьироваться в зависимости от индивидуальных особенностей каждого пациента, типа импланта, использованных техник и других факторов. Реконструированная грудь зачастую выглядит совсем не так, какой она была до удаления. Поэтому в большинстве случаев бывает необходима коррекция здоровой железы. Силиконовые импланты, при хорошем заживлении, могут ощущаться мягкими и естественными на ощупь, но результаты могут сильно отличаться в зависимости от индивидуальной реакции организма на импланты. Кроме того, зачастую, в реконструированной молочной железе, полностью или частично утрачивается чувствительность.
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Если мне будет установлен силиконовый имплант, как долго он прослужит мне?
+        </summary>
+        <p class="faq__question_answer">
+          Импланты груди не имеют срока годности и не подлежат замене. Повторное вмешательство требуется лишь при желании пациентки изменить размер груди или ее форму, а также если целостность импланта будет нарушена.
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Где я могу посмотреть фотографии результатов реконструкции?
+        </summary>
+        <p class="faq__question_answer">
+          В разделе «Результаты нашей работы»
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Возможно ли в вашей клинике восстановить грудь по ОМС?
+        </summary>
+        <p class="faq__question_answer">
+          Одномоментная и отсроченная реконструкция груди выполняется по ОМС гражданам РФ из любого региона страны.
+          Подтяжка (коррекция) второй здоровой молочной железы выполняется только как платная медицинская услуга.  
+        </p>
+      </details>
+      <details data-answer-category="reconstruction" class="faq__question">
+        <summary class="faq__question_title faq__summary">
+          Как связаться с Вами, если я решила восстановить грудь после мастэктомии/резекции?
+        </summary>
+        <p class="faq__question_answer">
+          Вы можете оставить заявку, заполнив форму записи на консультацию (ссылка на форму записи) или связаться  с нами по телефону:  номер администратора отделения
+        </p>
+      </details>
+
+      <!-- oncodermology -->
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div id="documents" class="main__container">
+        <section class="main__documents documents">
+  <h2 class="title--m documents__title">Полезные ресурсы для пациентов</h2>
+  <span class="text--s documents__subtitle"
+    >Здесь мы размещаем полезные буклеты, статьи, документы для вашего
+    ознакомления.</span
+  >
+  <div class="documents__container"></div>
+</section>
+
+      </div>
+      <div id="review" class="main__container">
+        <section class="main__review review">
+  <div class="review__wrapTitle">
+    <h2 class="title--m">Отзывы</h2>
+    <a class="text--s review__link" href="#">Оставить отзыв</a>
+  </div>
+  <span class="text--s"
+    >Отзывы с сайта
+    <a
+      href="https://spb.napopravku.ru/clinics/gu-klinika-vysokikh-meditsinskikh-tekhnologiy-im-n-i-pirogova/otzyvy/#reviews"
+      target="_blank"
+      class="review__link"
+      >НаПоправку.ру</a
+    >
+    Оставляйте ваши отзывы, мы будем рады обратной связи.</span
+  >
+
+  <div id="crsl-1" class="review__carousel carousel">
+    <div class="carousel--hider">
+      <ul class="carousel__list"></ul>
+    </div>
+    <div class="carousel__arrow carousel__arrow--left"></div>
+    <div class="carousel__arrow carousel__arrow--right"></div>
+    <!-- <div class="ant-carousel-dots"></div> -->
+  </div>
+</section>
+
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="star">
+    <g clip-path="url(#clip0_140_2484)">
+      <path
+        d="M9.09986 2.39024C9.19157 2.23288 9.32293 2.1023 9.48085 2.01155C9.63877 1.9208 9.81773 1.87305 9.99986 1.87305C10.182 1.87305 10.361 1.9208 10.5189 2.01155C10.6768 2.1023 10.8082 2.23288 10.8999 2.39024L13.229 6.38858L17.7524 7.36858C17.9303 7.40724 18.095 7.49187 18.23 7.61402C18.365 7.73617 18.4657 7.89158 18.5219 8.06476C18.5781 8.23794 18.588 8.42283 18.5505 8.60101C18.513 8.77919 18.4295 8.94442 18.3082 9.08024L15.2249 12.5311L15.6915 17.1352C15.7099 17.3165 15.6805 17.4995 15.6061 17.6658C15.5316 17.8322 15.4149 17.9761 15.2675 18.0832C15.12 18.1903 14.9471 18.2569 14.7659 18.2762C14.5847 18.2956 14.4016 18.2671 14.2349 18.1936L9.99986 16.3269L5.76487 18.1936C5.59813 18.2671 5.41502 18.2956 5.23383 18.2762C5.05263 18.2569 4.87968 18.1903 4.73226 18.0832C4.58483 17.9761 4.46808 17.8322 4.39367 17.6658C4.31926 17.4995 4.28979 17.3165 4.3082 17.1352L4.77487 12.5311L1.69153 9.08108C1.57006 8.94526 1.48633 8.77996 1.44871 8.60168C1.41109 8.42339 1.4209 8.23835 1.47715 8.06504C1.5334 7.89173 1.63414 7.7362 1.76929 7.61399C1.90444 7.49178 2.06928 7.40716 2.24737 7.36858L6.7707 6.38858L9.09986 2.39024Z"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_140_2484">
+        <rect width="20" height="20" fill="white" />
+      </clipPath>
+    </defs>
+  </symbol>
+</svg>
+
+      </div>
+      <div id="contacts" class="main__container">
+        <div class="main__contacts contacts">
+  <h2 class="title--m contacts__title">Контакты</h2>
+  <div class="contacts__columns">
+    <div class="contacts__block">
+      <h3 class="contacts__address">
+        Лечебно-диагностический комплекс (стационар № 1)
+        <a href="https://yandex.ru/maps/-/CDeXMUlF">наб. р. Фонтанки, д. 154</a>
+      </h3>
+      <ul class="contacts__list">
+        <li class="contacts__item contacts__item--metro">
+          Балтийская, Технологический ин-т, Нарвская
+        </li>
+        <li class="contacts__item contacts__item--schedule">
+          Часы работы: стационар — круглосуточно. <br />
+          Диагностические услуги с 8.00 до 20.00
+        </li>
+        <li class="contacts__item contacts__item--phone">
+          <a href="tel:+78126762525">+7 812 676-25-25</a> — Единая
+          информационно-справочная служба (регистратура)
+        </li>
+      </ul>
+    </div>
+    <img class="contacts__image" src="images/design/contact_image.f7b533.png" />
+  </div>
+</div>
+
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="footer__content">
+    <div class="footer__row">
+      <div class="row__container footer__container">
+        <div class="footer__logo logo">
+          <span class="logo__image image">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABvrSURBVHgB7Vt3fBV1tv/Nb9rtuemVJqGEIh0NKILyVkFFcJVFV0VAwYSQAimQAKGDIQRIDJBIU1RUdlVEXamCIIgCRtoKoYQQ0ki9Ze70eWciwZgXfJQF/3jvfJTcO79+fqd+z1yE/kSaHJcyaNaiRQ+gP5Ew+pNoxqxZD9Rz/L5LRZUHZ87PaI/+JPrTGEBggwf+aAQmZElWJfQnEYnuIWmaRnCc0j4+PsZRWl7eTVKJwQSB6y0Gcvv+fXtKDQav8N27t9ege0gEukc0YcLkNipr+KckSL1fjp1g/TDv3WNw8x2BLYhhqJ/6RHQdfqigoMzMMj8YKXrkihWLytA9oHumAthsXgUH7oMwQez76AubqiCjfnidNFlWL14pCkAEgVyi1N+jqcvRPaJ7wgBd9CVJebjhwHBIjyj0NZiYbb+2IWQwGvaICuqmf9dFUhCFQege0T1hAEEQGvx3XbdrXM6oUG+vVSRGAkWSLp4Xczg3N+X6AI0oRfeI7pkKECSRi1QNUQQuwyRVqyhUhYU1Pudtt4zq3LatpihKFYmJMl0kaBrloXtE98wIghqQ09MW/eWRcaP37Fj3Xigha11domwmSQUpqlzrZ/e91KtreOG+7396PDdr8VfoHhGFboOipk5txfNoDch2P7jVS6SK16zNy1zXvF96+tKAKzVVXxgM1FJQgy3AhK9fm5J8XFKUzqqicgwmi2WMNEXT2ly+UmmtrKr5YV1u5oP62ElxKbPBRfZZs2LxM83nzcrKMv585tI0TFGvkgRNa6r8+eOD+yePHj3ag26RbosBIL4bZFl8rMGGa8hfJNS1EydP88nPXba0aT9JEsH4iV3BtbHXn4ki5evvncG5BBlr8mVNRVaZQJgxsF1lUbkeEUqyzMLhurS0/rniqg9kjRiJJRXJiNdNa8xXew5WQ9McdIt0yypw5MgROjv/PTdFUpetZsMiRZFph0dYwGDiwNpVWSP1PtGxSXEmo6HMKYgPuDlxKkvhf7EsXuFyC8Hv5me/M2VKuo3H7iiKoKpVSbYhhuLbBnht5n18hCs/nY1tExr4z3MlpXvgkGF2m/FvLGY6yZLrePbyzK36/GPfmHpFVVXO1+6Vomry/U63GIMJdHFd7tJ+6Bbplo2g0+kEi455TBI1I5+c/85by5esgUlOIEw1bG5cVNxLDl5cUefm+/CiHEyAUVNkxUeU1AGqhjfGJM16JSdnrkOVNQtGqgAS7JEVzTJjxoza0hOFb4qKsrjW7ekJV+Ov344samG1zvohdW75k1mzlnTX12Bp+mujkf3Hioy5n1TV1G0A1WJkRb5l8b8tBgwZMkSGxbMEUey7+ZOUmIZJCCLM6m35Qf9Ms+aO4MaQLMuRXhbjTviIaCPzHtxmpN7ucbq6Nkyk4U4qImoUVXFpktxafwTfO2twlfVOVzcDw24lVFULDQ7cryGijwrLlFaXhjb009R9oC4Nnw2sIR2k0GJi2Rx0G3RbbnD18kVzTRZTLieKs1NSUrzAGPIMVpx6W4Bv4CaaIb8CFfgu2NtnX4i/96vj/jZyHda0OprCdXZv2wa9n6wpvSA6qLSbzcXwdWDDYSh6M9bUqxjI12KL97N7TWAIkmcZaj2lKdufeWLot3o/1mDiCQrz8xZn9pMkaSyoV/zqlUu2oNugm7YBMQlpfXlJqF77VubFxmfjoqadg6tcR9OUv6po4SYjneqo4lwQ5K7RNPwwiLYRgw6QFHWJUJSdmia9tTH/rROpc5cMA6v/yQtJUfaCLdstZ4rOlfnbrA9nZs4//HrMtMcJkp4g8J5HFRX5wO0jmiJrYZrPurQPjr1QXNnXLchr4ebSMU09q8qKujEva3Tjnl6PTupJaaRj9eolF27mXDctAR7OE0diclbj9+zsbH+QUC+SIoe1CvPLFRV5iJsXXsMmarasoMc1Ta0BucyAAOACqEM7WVUnIpI5kJSa0dPDOSmaIb4Z3qGDkJoaUw0MOkIyuN0bcdNjwG58yXmE5xUN+VKY2OFlNmVrqsaKqjq+sKj8BVnT3lZVhZj46tRPQfSfAJXx10Ptxn0pSM0RkTT2Zs910wwAsS7geeE53YInp85+7OjJosOKpvpBjI9mJSef97d7Dw4PDVths5qOkoT2DU1RvCTyIb27dBkEGwSzAHZBUW0VNWU7JYU42Tey998b524f6v1XhjaqTo7Phhsndd8Kt355Y96KJxRNehhT6JKRZbeB4XUEBfiNCg0NeTQyMkwkEFgJWRn8Rvz03fHJ8yOSZ87vJIryQxQw9GbP9YcM0DkbHx9v1z/7+Nh3wq1YnZIjmpdRawVp7WADiCXxT3q7S/T0Lrx8ZWt55dXP38lb+WjUuDFdOrcLST5+9swGCIKu5X1gwFTNz+3xbO3fqZOrcZ2CSxV0SWXVGoL4TSUlWWk1cUriSi+WGNzab1n3tTlvjjAZzMVllTX/cjucATCnQpDkab2v280PJklZK7tak4RJUugR0eaA/jw3NzcI3QkDYhJSH6zx4MJp09LaLJyTeoJh6ALQywRvo/enDIUP6YciaeaU3lfg+JdBJCMMRuMP4ycnluSu/eDzsur6fmHBoSkkxqVNjY0kqd3f//jLFxu/myk6RVJk76ZrkyR50i8odIlDJl8qrknZOy4q8Wqd0/mZIEiteFFokB5CU07qnDUxTFZ1bQUPa7zCUORX0dHRtfOWZPc4fPzc5YULlwej22XAc8sX/QhgRXWVw/15UtIcfy+zEURUCyi+ejkRi+Jo8OOFpCo23CRJ0fpflaWZTzChTrNZLRsdLuHF0oqySXabZTxsVPttZg3Vc+5puoQlpafDLWm/01mKoq+SCh9VXlryHkSKHcGD5FhMplhoAJeo6i60weNQNO20WE0f5q9amohJ8zyYj/b38V7+WkxiuwsXi75mWWZPWlpC2W0zYAhByBRNZSiIuN8pcFnhbQK3gM8vASmItfj5MAEBfo8jTNbqfY00/bm3zevBvJVLJgcFBh7nPHwPA8seBp3mHLX1D9E0/o5owgJRELonpM3pVVvtHgZ4iLnpuiRWPrJ6+UZZTMZPwOc7GJK+TxP4fetzMp43MHSCwWbcq/czUGRR//s7RKUvyXwIdP9llqGPtA3zPaoh/E+wN4FBQYEL0P9CN3SDr02Ke0nQtG835WcXj49O/Ap0chjk7m+abMZjjhrnR3DZ51mDYfDanIySpuOmJKf93enkFxJIXW+z2faqXE2BjC1Ziiqd5AR5edOlGQbP1RTUH5KjYU3nCA0KGl5TVfF4eMR9GRcKL0fwvDQaGPmov6/16WWL5/7StG/szPkd6qtrD+nRZtdunfoVFV1KdruE0SxNZa5blZkUFzezEydwHd5ek/VFS+e8ISjaq9/AxXDTKZGPPfnlXwb2eLeouHQwhKljKIzLwfXVS4raT1blkX3uj/yioOD72sS09Kndez64kuP43kaDdeS4F0dsr6ksrapyiFMkWai0mmynOV54qSnLKURa4GA94ZYNTZbW+nfvM6Wqrqp/RWkNGxc1drvgrvuGZqjvyq/WftD3gUHDnx4+Qty3b9fpqWkLHqyprv1aUbUAs9Hwbm117SjOI44A15n/+tjnp9mD2jxS7XR8DYax7tiPB3e0dM4bSkBSUnpQeV3ddxRJ+xpZepp/K9+txWdL9ASlO8vS5bwoNlhYhqRqSEpNfTsnK+8bTaN0tdGfT01JG+DkxM5eVvuRzEVpxyfFpf6X28PtQP8LgY5rXe/v6J8aE1M9eVrKIE3FHYJ97AdnzUr59zV/j48ePYrz39mcxAtauopURh8GqlEuCGKw2Wz6x6hhg1/dsnVHkiiraSRJ/PzgsMGDJo0Ywd0SA3R6Iz6lrcvN7UEE1Q6Cml1GM5vmrHHl8IrSv9mukcVg/M5qt85YOj91f0tzRU9NneV0cvO0m4g9/WzWASsy5x9q/hwYgKdOT3/S4eQWCLJ8f9M23ZixLPuuxYDX17nEFaCyPSGWOOprtgzPzJxbeaO1WtzOhOi4SRjRan7u0rVTp84MqfZwOyH9jMCIdJrMZC7S6GdcnCcCNTHsDQZO1TQDS28K6RAaNzchoa7pnBCifs9L0gPNGfCrYYQ44ZqF1P81kMS8dauXpzftN2VKchinaBtEWRqqtbBni9H4laQqJzwePhlDtQVS8B19uoePuXDBLdZyZZPNJkthdua8T5uPa9ELYJWUeFlZ9cqkhF9qOH7QU49GdjewFLgagK3d0nTww74YE0rTMfrBNJIgOEl6pex8SXzTtpnpS4fy8m+H1//AVNUMRf8IEeYPNEXUN/KlARWWtdgpyelhTeeAXHeZcIPDY0zyHo8wSODFFIgfqr1t5hcfiez57PEzl1++6ir/RZHRDCPLVKCWxrb0ECzm+tatAx+BmJtVNeWDL3YfKiQIKoRm8DjQtY8UWQ0AifidASURFsFFuiGb1Td0fZ96eHqpvORt/YEeEcKCu8wsPejVMc8ErV+1tP/63GUPzJgaFWi32UZAtniiIRgkkN3ldG1LBEjtNw4rCgEhAIXJ+uaCC/s0gAQZbDbjBquRniTIyoCdB44WuzyelZCMVftarZFvLpx5sKWz/qFGfvzxx177D5+Y4nRz0YqiBusCCuhuCcOyPO/hw5v2NRro+JDAgG+ulJdP9A/2TQ+2WFwnL5RECbw8T1FVqz4WXFM6ZJPzdZhcHzMxLjXBZKB+cTq4+WEBbUZ07RpYsf3bH5cIopRINDAMlbAMM/3tnIz3X46NbW1Ahtnjxoycsv6DT9/kRWlK0/WtZvMZt8vtrxKEDwROCNP4sgFc4aMD+64BrFC80RlbZMDkuOQkXpI7Q0T2eXhE20NtfB+u27lv00hg9euQ4TymYv0uf080TZ8gEbGeghROlHXQUxkBGWBQ4yJQA5i7cc2KOY39x0VFtVKxeY+RwO9RtFr41vLMDxrbJk5JftsjSK/9GjwSOuByFlLuXbBoIbhhws2LMZBt3td83ySBBZIitiuylP3kYw/tP3Wxwq+irPwxRRSHKkj+dv2q5f8DuG0RFIXws1RWiTjBI4w/ffxczSl0/ghEcufARe3w9rKdcwr8o5IodWw6Br53lwi0HEktTnj+2eFDM4AB1x8ZTLZuDqcYLtHa8DXLl/3uHQHMGtOwJI/Q/fuvjlHrCAhUR3QDAohOMhmZ0xQi9oF3KNMwPfrrb3+YDQFWb4CcLQxNXfQyWda2OPZGk3722WfWT7fvew5r+CVwPwNABUDP8LUR6vV+FI2LFUkJg0cYNZELsAUSZGtXZUUJ8fX1enrl4rm/i8TS09Mtl6rcJwEx3PRO7vJZzdePSZgeXevmc0FtSkVJCiI0jHWJIK4lFQAaSSAVZRACt9auPQOE6dftwQ0CdlEP6rofLuy9tiHen8XGxgq3xICmBAygYqfN7i4jpasoSj3A4PUXFLk3iLnpvo5hgSEdO3KXf/53m+rKai/aRGMSsfW9urYt2n3wWB5JUN3Xr87s0XzO+JT0VTV19a8BunyKxspbeW/9XjzT8/JMF46eKoZALPexgb2WHTt5pr3IyybazAikoFR3GNS/4tieQz1cbs9BmiYFAEp3AvBygqLQaW+778HFc6YXE9eCsj+iG+cCk6ftBj62JjSVA+7KOvMBbbECl32hjOWl6aoJ//j6mIaseHPh3ubjwYCS/9r7fbnRyMSvWrbk/aZtM2bNi7xcXnPwt9U1NSw4qIMocF6CoHRqF9pmV2LipCoIxOaIgvJXYGD3lvYYHTdjgoPzrG2YB5IPGkpusK1K+NiAEIMtZFQCmSEm2J6XnRHV0hw3zAb9fPwSQYw/Av2DoqYWpihSJ0Bf2sBfGywACSIhq8AVzsn3amn8wYJT3QEt8vX2thxo3lZe7ci5jpFoOszNvFtVcfXvNQ7uQL3LvflU4Zk9wEDGYjVvlxQpAipBPi2toWhK74aza5p+QaosS3bIOzqIstwN9hcCBvE8Q1HrwsJCs25wzBtXhpbMn6EjPQ1ojx6D7wUj69y2jTl+rqhb2eWyJz2C+LKgKTrWF9HSeJkXW+tJ04K0tOKFM2def56evvD+4orqcG+b9UU47EaSIOvtdsuesoqquUHB/g/x9e4xkqYG7P6u4JG2ncKOVFTUECW1rjYw9H+8OQKRZYTORXCVpy1GZl1YoP/egQP7F0ZGRuqmWGl0t39Ef1ga06tAG97/x1MT45N7a1DMlGQ1EnDAoIawj9B+lWCSbLEaA33bgcsqbr6JilrnYprEcxyy82uCID0WM5tXW+9IgAgu+GpF9WA/u/2fHqd7HoPlIdOjonaNj0pyO2udusv7qek8+qWMn5zUUyEknRH3C5K8srq+CJ0uKjm/7v1PChCBf5o0edoPebnLdv7RGf8QENmw4aPu4I/XgqWNgzh7AEmTxbD51VDri7VZDOvBPwOSJXcEhJhtPhbUwwS+4neWd2JsUpYgiQNljAdqHnQFRNYL4oafJVHuZTUZD/fsFrEHsMauGhhYYGBAA/Mw0qNLpvn8C5Zmh0NNAGA0os7CUKssJiaaMVCbgDE18P8jUCmaLqjqu5Mnz/D9ozPeUm0wPT3PVF577nVRVBPh5GH6YF0Y2gb4dVYUzcfFuxTGZOjEO3ksEdgP3NfYjauWNWRt+o2NjZparjb49l8JcoEiQHwzobFj+5Cg9y6UVmwxG+jP3Bz4ckS0Wpv7ZsyrUYl1BoaY4Ge3SdX17pMYs5QRQkLOI7dxulyfa/rUkPxA9HcGdH7ehlVZm29G9BvppmHxiTEJ44orzxS6PNIKWMAIGdtsHx/LLN0TVNU7+wYHh50TRCXC1+z3tclk4DRJKofIMbBx/CuvTGoFAYu16ZwQI5wHID8CVOWr4oqqal4QW9PImEsb6GKSRBc+/vigUS97qZJagTHjtniZww0UesPt8gyAwKiHDrV7+1gnAV6RDXFBCMBg7499I+Hfb8QlP36Tx7p5BhCYeobA+DDcULSNlcNJmi2vq/dM11ktE2qn6mrJbTJZfnZ56h7v0qndTpuv11nIAfwWLVrUIIK0xTbNxDK/wwogXteRXDOAl6zb6c6jWebzKlfNCzzHDQL3++O+g19EQMiLO4eHX4T8oAdUWTEEV8WAU+o2oac+h6OOS/fz8d7KsnI3q8kQS0M7XNDQmzzW7b0h8mpUQpIsaxmQHl/RaxgMQ367Nifzeb1NjyBHjhzpzINA5uCx01fNVsuLYl3FccR6TYeDbnM4PNu0a2wH93cAgokfwak+7ONtzXVxXDCktA8Co33W5i4dFJM0c4rbLcRsXJ15PQzW3zRJTU31KauXdoEN8lJVZFQk2e7jbf7ryqULvrjVs9xWcRREdjjg74t8DLZumKR2gr/v2timH17/O2nSJA4qNLsFTphEmX1TBMm50C/MH4Kf33AESZa7WGzWI1A83AVzFLAUvVfFuAQRcr6ux24nFwMxx66ma+sFkV69etVoqhoObZsUV30/UJd3IEJ9Ft0G3dYbImtzlw1p/PxaTPIFGeEndSPX3PhYbJb86ur6baCqSzfl5+tVYDQuOrFQhkxTN54AhvpQqgZuX3zC7VEZ6NfWQOKLa3JWbJocO31UPS92aB3gO7r5+kVutz/kJiYzaypct2mZPu9EdJt0x2+JgfEpkSXFtn7rVkvzthWL5nwFWP0pgKz76t9nzZvXXdOUIBD76znj1XrHCrORSjAw+CyhamvW5GQk6tifi+cWAWy+fdHctILm814tLApq2LgmX0Z3SHfMABUjXeTxqW9P2pu3gUSofl62GMhIHp4cP338/NmzT4wdPcKfZtX7GBp/CO0SHBbgNcOwnKzFeXm5GQ1By/jo+FRM0gEErcS0tKbD5fFtgCBJ5EZ3SLelAk3JSDEOHvHIHmIJiklOjeKqyhd7+wf3yFyy4DtdJd5cOGvvhJikNHCfufEz0h1Dhgz5BwzTiykvxCWkzYVc41L20rnrG+ebFDMtzgUokt3LMC532cJz+rMNGzYYzp270nfgwN7Ht3/zXRIkWAVuj4i8DUYHukO647fFBwwcECAq6CHJI1RLouJPsaY2Trf09KH9u3cNHToiAAoYjn49Hz6pUupQp4tLGPDQYMtTTww9sW/fPtfh7/fv/eH7/Q0hbnb222GtO3TJcgtiKkuR254a+tC8zZs3S7GxKa0Du3QQ/32qcOnZwiIG0KaeIuTlEIgNDGkTmLFn+3YXugO64xclAfSMqKqpz4eQdh/Ywd4QgpaDMauiKSrQxFI5LrcQDoxZLRPadRUBUylTFLkfUKbTULzQ8eSeUB/UUaGmF1LcOtj/aWe9J4CX+VGqimlI+jyQYA0EYPQjCIQSRg4bHD7iBgWPm6U7VoGI9mEXf/YIKwmD4VBNZdUBAOZCITaATJA4BWBFRnj7ttMvXCw5i2W5jahoelBEAX5DiYo6BCCrBm9C/AoZNyA5gCgLFElchZL6RRIQFyfvXogpyqFq8gAIAs7LnGigGPJDg4kpudPDN6yN/oMEObxx197DfTQaBxqNJjeDUWltnQNAVBxOqES12WIuYCjs4dyeIR5RfgmkJVivdlEY0F8a59r9Aw4rLj6o3uPuCoe10yQqCG4d+nPp5VIfSJIsXjZryZhnhh/r27fvf+wXJnf1XWFAd/cKsnofZHNGyNx89VuGfKASSl+vKgJ13iHUnoAdVHv5+PbmhbpHJU7NliTZDyIKhSJxFRQ1JU2WftqQt2IEukt0xypwI9IDo9Q5iycunpt6VofHIOT3P3zs+1BM4cCaOu4vRpLYDqBlOdzAJVYTH/CoZC+jkR7TKjTA2bt750sg3ld1N7pyzZoO6C7SXZGA+BS9qKpmAI7QnySxXVM1WtY0BhIbiKJxBUtRcymKIF2cmAPoLd82LGhYZW1dTw/nSQa7EKyDmSSUFyDJBWSZqESyekRS5en6uwroP0x35fcCLqe8Fio3z8ua2hpweQoyu0qrkf3A22p6JrJH3wiSpLu6OCEbxFxQkcJevFy6A2BG47PDB4fbjcZnoaLzCbRVAPjKioLUAQzmC5hilqG7QHeFATIE+TQilod521sPH/qg16DIHhE2X3uGhxc6/3ji2DHO45lsMLAHCEyWgbU/DnW/YgfHL/r0y72HRU3x9jKY57703FMd38lbbm4bGNrRYGRzAfFg0F2gu6ICEydO9MrPz6+fOCUpSpSUWDD0bfXCit6mw2iQBudAnH+u3sWtgi2ovhbLKJcgvgC+fcy1yoZe5nID0POLxWpa8FbGgs+ef/55ry1bttSj/zDdld8NHj16tAELfGrYqGIZK4wkyATDUIVQO/ywU8f2E0WPUAl4fj4YSp0pUEuUBtp8jRN8rJZ8QJWgwka4IY44wzD0p/27dfx469at8unTpwV0F+ie/WQmOjrdQhilSElQxoMq/A1E2gmgqQ2chQZRoagqKuAg2joAhz4Y+cQjPw4fPvyuHLg53bMfTfmHGHu63Z5loiL+F1SSvwwIsPaEosUFFtM7QwJ8e0P1+AhG1BhZkrJ27Pg2FP1foHFvxCe/Hps4Cv0//Xn035TzbKoVWBnAAAAAAElFTkSuQmCC" alt="Logo" />
+          </span>
+          <span class="logo__text">
+            Отделение хирургических методов лечения опухолей молочной железы
+            клиники ВМТ им. Н. И. Пирогова СПбГУ
+          </span>
+        </div>
+        <div class="footer__columns">
+          <ul class="footer__list footer__informationList">
+            <li class="informationList__item">
+              <h4 class="title--xxs informationList__title">Адрес</h4>
+              <span class="informationList__text"
+                >190103 Россия, г. Санкт-Петербург<br />
+                наб. реки Фонтанки, д.154</span
+              >
+            </li>
+            <li class="informationList__item">
+              <h4 class="title--xxs informationList__title">Рабочие дни</h4>
+              <span class="informationList__text"
+                >Стационар кругосуточно Диагностические услуги пн-пт с 8.00 до
+                20.00</span
+              >
+            </li>
+            <li class="informationList__item">
+              <h4 class="title--xxs informationList__title">Телефон</h4>
+              <span class="informationList__text"
+                ><a type="tel:+78126762525">+7 812 676-25-25</a>
+                регистратура</span
+              >
+            </li>
+            <li class="informationList__item">
+              <h4 class="title--xxs informationList__title">Email</h4>
+              <span class="informationList__text copy"
+                ><a href="mailto:email@ya.ru">email@ya.ru</a></span
+              >
+            </li>
+          </ul>
+
+          <nav data-section="footer" class="nav footer__nav"></nav>
+          <div class="footer__social social">
+            <h4 class="title--xxs informationList__title">
+              Подписывайтесь в соцсетях
+            </h4>
+            <ul class="social__icons">
+              <li class="social__icon">
+                <a href="#" class="social__link" target="_blank">
+                  <svg
+                    width="32"
+                    height="20"
+                    viewBox="0 0 32 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.385216 0.699999C-0.4698 1.8 0.0834459 4.25 2.19584 8.45C5.51531 15 11.3998 20 15.8761 20C18.6926 20 19.4973 19.25 19.4973 16.65V14.35L22.4648 17.15C25.3316 19.9 25.5327 20 28.1984 20C32.8758 20 33.2279 17.95 29.3049 13.6C28.0475 12.25 27.0416 10.85 27.0416 10.55C27.0416 10.25 27.8463 8.75 28.8522 7.2C32.4735 1.55 32.2723 0 27.8463 0C26.4381 0 25.0298 0.199999 24.728 0.4C24.4263 0.6 23.5712 1.9 22.8671 3.25C22.163 4.65 21.1571 6.3 20.5535 7L19.5476 8.25L19.4973 4.7C19.4973 2.65 19.2459 0.949999 18.8938 0.6C18.5417 0.25 16.882 0 14.9205 0C10.7963 0 9.79039 0.75 11.0981 3C12.104 4.65 12.3554 10.1 11.3495 9.1C11.0478 8.8 9.89098 6.7 8.7342 4.4L6.6721 0.25L3.85558 0.1C1.79348 0 0.888167 0.15 0.385216 0.699999ZM6.57151 4.35C8.58331 9.75 12.2046 13.45 13.5122 11.45C14.1158 10.5 14.0655 4.85 13.4619 3.3C13.0093 2.05 13.0093 2 15.2223 2H17.4352L17.5861 6.1C17.737 10.2 17.737 10.25 19.095 10.4C20.2015 10.55 20.7547 10.15 22.0624 8.4C22.9174 7.2 24.1245 5.3 24.6777 4.1C25.6333 2.2 25.8848 2 27.6451 2C29.9084 2 29.9084 1.85 26.4381 7.3C25.3819 9 24.5268 10.5 24.5268 10.7C24.5268 10.9 25.8345 12.55 27.3937 14.4L30.2605 17.75L28.3493 17.9C26.6895 18.05 26.1363 17.8 23.8227 15.6C19.5476 11.6 17.4855 11.65 17.4855 15.8C17.4855 17.9 17.3849 18 16.0773 18C11.9531 18 6.72239 13.4 3.85558 7.25C1.542 2.15 1.49171 2 3.75499 2C5.6159 2 5.71649 2.1 6.57151 4.35Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__icon">
+                <a href="#" class="social__link" target="_blank">
+                  <svg
+                    width="27"
+                    height="20"
+                    viewBox="0 0 27 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.49365 0.141998C2.05879 0.436516 0.497331 2.58229 0.201919 4.68599C0.0331119 5.69576 -0.0512915 8.80923 0.0331119 11.5861C0.286322 19.8747 0.750541 20.1692 14.6349 19.9588C23.8771 19.8326 24.0037 19.8326 25.0587 18.8228C26.578 17.3923 27 15.5411 27 9.94523C27 4.34939 26.578 2.49814 25.0587 1.06763C24.0037 0.0578518 23.9193 0.0578518 14.2129 0.0157776C8.81107 -0.0262966 4.00007 0.0157776 3.49365 0.141998ZM24.0881 2.32985C25.0587 3.12925 25.1009 3.29755 25.1009 9.94523C25.1009 19.1174 26.0716 18.4442 13.2422 18.2759C4.46429 18.1497 3.32484 18.0655 2.64962 17.3923C1.97439 16.7191 1.88999 15.7935 1.88999 9.90316C1.88999 0.857256 0.961549 1.53044 13.4955 1.53044C22.3156 1.53044 23.2018 1.61459 24.0881 2.32985Z"
+                    />
+                    <path
+                      d="M10.3027 5.25107C10.1297 5.38454 10 7.38657 10 9.65555C10 12.6809 10.173 13.7931 10.6054 13.9711C11.5568 14.3715 18 10.5009 18 9.56657C18 9.0327 16.9189 8.1429 14.7568 6.8527C11.4703 4.93964 10.8216 4.71719 10.3027 5.25107ZM15.9676 9.56657C15.9243 9.61106 14.9297 10.2339 13.8054 10.9013L11.7297 12.1025V9.61106V7.16413L13.9351 8.32086C15.1459 8.94372 16.0541 9.47759 15.9676 9.56657Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__icon">
+                <a href="#" class="social__link" target="_blank">
+                  <svg
+                    width="23"
+                    height="20"
+                    viewBox="0 0 23 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.2281 3.36639C5.56596 5.19072 0.666026 6.94351 0.339363 7.26545C-0.495441 8.12396 0.157884 8.91093 2.88007 10.2345C4.15042 10.8426 5.34819 11.4149 5.52967 11.4865C5.67485 11.558 6.18299 13.2392 6.61854 15.1709C7.16298 17.5318 7.59853 18.7838 7.96149 18.8553C8.25185 18.8911 9.37702 18.3188 10.4296 17.5318L12.3896 16.1009L14.894 18.0326C16.3095 19.1057 17.5799 20 17.7251 20C18.5962 20 19.2132 18.2472 21.1732 9.98406C23.242 1.25589 23.2783 0.93395 22.625 0.468925C22.262 0.182756 21.8628 -0.0318718 21.7539 0.00390053C21.645 0.00390053 16.8903 1.54206 11.2281 3.36639ZM19.9028 9.48327C18.8865 13.8116 17.9791 17.6033 17.8702 17.961C17.6888 18.4976 17.1806 18.1757 14.7125 16.2083C13.0792 14.8847 11.5185 13.597 11.2281 13.3466C10.7926 12.9531 11.3007 12.2734 14.3858 9.05401C17.834 5.47689 18.3784 4.61838 17.2169 4.61838C16.9629 4.61838 14.4221 5.90615 11.5548 7.44431L6.36447 10.2702L4.3319 9.37595C3.20673 8.87516 2.04527 8.37436 1.7549 8.26705C1.46453 8.15973 5.78374 6.5858 11.3733 4.76147C16.9629 2.93714 21.5724 1.50629 21.645 1.57783C21.7176 1.6136 20.9191 5.19072 19.9028 9.48327ZM12.3533 9.16133C11.954 9.73367 11.0466 10.7353 10.3207 11.4149C9.5585 12.0946 8.83259 13.275 8.57852 14.0978L8.17926 15.5286L7.70742 13.5612C7.45334 12.488 7.34446 11.4865 7.48964 11.3434C7.74371 11.1287 12.7162 8.26705 12.934 8.23128C13.0066 8.1955 12.7162 8.62476 12.3533 9.16133ZM10.7926 14.7774C11.1555 15.1709 11.0466 15.3855 10.4296 15.8505C9.41332 16.5302 9.37702 16.4944 9.63109 15.2424C9.84887 14.1693 10.1755 14.0262 10.7926 14.7774Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <span class="title--xxs informationList__title social__more"
+              >Больше информации на сайте</span
+            >
+            <a href="#" class="title--xxs informationList__title social__link"
+              >Клиника высоких медицинских технологий им. Н. И. Пирогова
+              СПбГУ</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclamer">
+      <span class="footer__year text--xs">Ⓒ 2023</span>
+      <a href="#" class="footer__policy text--xs"
+        >Политика конфиденциальности</a
+      >
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
